@@ -24,7 +24,7 @@ public class TestBase {
     app.init();
   }
 
-  @AfterSuite
+  @AfterSuite (enabled = false)
   public void tierDown(){
     app.stop();
   }

@@ -37,7 +37,7 @@ public class DataProviders {
     List<Object[]> list = new ArrayList<>();
 
     BufferedReader reader = new BufferedReader(new FileReader(new File(
-        "src/test/resources/user_negative.csv" //TODO
+        "src/test/resources/users_negative.csv"
     )));
 
     String line = reader.readLine();

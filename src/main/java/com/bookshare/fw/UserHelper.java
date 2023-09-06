@@ -10,7 +10,7 @@ public class UserHelper extends BaseHelper {
     super(driver);
   }
 
-  public void fillInRegistrationForm(User user) {
+  public void fillInRegistrationFormFromCsv(User user) {
     type(By.cssSelector("[name='email']"), user.getEmail());
     type(By.cssSelector("[name='password']"), user.getPassword());
     type(By.cssSelector("[placeholder='Repeat password']"), user.getConfirmPassword());
@@ -19,5 +19,18 @@ public class UserHelper extends BaseHelper {
 
   public void clickOnSignUpButton() {
     click(By.xpath("//button[.='Sign Up']"));
+  }
+
+  public void fillInRegistrationFormWithoutCheckBox(String email, String password, String confPass) {
+    type(By.cssSelector("[name='email']"), email);
+    type(By.cssSelector("[name='password']"), password);
+    type(By.cssSelector("[placeholder='Repeat password']"), confPass);
+  }
+
+  public void fillInRegistrationForm(String email, String password, String confPass) {
+    type(By.cssSelector("[name='email']"), email);
+    type(By.cssSelector("[name='password']"), password);
+    type(By.cssSelector("[placeholder='Repeat password']"), confPass);
+    click(By.id("checkbox-id"));
   }
 }

@@ -3,7 +3,6 @@ package com.bookshare.fw;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -32,17 +31,36 @@ public class ApplicationManager {
   public void init () {
 
     if(browser.equalsIgnoreCase("chrome")){
-      System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver.exe");
-//      driver = new ChromeDriver();
+      driver = new ChromeDriver();
+
+//      System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver.exe");
+
+
+      // СПОСОБ 1
+
+//      ChromeOptions options = new ChromeOptions();
+
       // Создаем объект ChromeOptions и настраиваем опции
-      ChromeOptions options = new ChromeOptions();
 //      options.addArguments("--disable-extensions");
 //      options.addArguments("--disable-gpu");
 //      options.addArguments("--headless"); // Опционально: запуск в безголовом режиме
 //      options.addArguments("--no-sandbox"); // Опционально: для безопасного запуска в контейнере
 //      options.addArguments("--disable-dev-shm-usage"); // Опционально: для безопасного запуска в контейнере
-      options.addArguments("--proxy-server=http://localhost:3000"); // Указываем адрес localhost:3000
-      driver = new ChromeDriver(options);
+//      options.addArguments("--proxy-server=http://localhost:3000"); // Указываем адрес localhost:3000
+//      driver = new ChromeDriver(options);
+
+      // СПОСОБ 2
+
+//      ChromeOptions options = new ChromeOptions();
+//      options.addArguments("remote-allow-origins=*");
+//      driver = new ChromeDriver(options);
+
+      // СПОСОБ 3
+
+//      ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--proxy-server=*");
+//      driver = new ChromeDriver(options);
+
 
     } else if (browser.equalsIgnoreCase("firefox")) {
       driver = new FirefoxDriver();
