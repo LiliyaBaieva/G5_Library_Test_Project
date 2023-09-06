@@ -1,2 +1,5 @@
-package com.bookshare.tests;public class LoginTests {
+package com.bookshare.tests;
+
+public class LoginTests {
+
 }
