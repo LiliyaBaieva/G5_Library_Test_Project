@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bookshare.tests.CreateAccountTests" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-09-06T10:26:45" hostname="LAPTOP-LILIIA" time="0.005">
+<testsuite name="com.bookshare.tests.CreateAccountTests" tests="2" skipped="0" failures="2" errors="0" timestamp="2023-09-06T18:33:51" hostname="LAPTOP-LILIIA" time="0.007">
   <properties/>
   <testcase name="isLoginLinkPresent" classname="com.bookshare.tests.CreateAccountTests" time="0.003">
-    <failure message="java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.HeaderHelper.isLoginLinkPresent()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getHeader()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.HeaderHelper.isLoginLinkPresent()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getHeader()&quot; is null
-	at com.bookshare.tests.CreateAccountTests.isLoginLinkPresent(CreateAccountTests.java:21)
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.HeaderHelper.clickOnSignUpButton()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getHeader()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.HeaderHelper.clickOnSignUpButton()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getHeader()&quot; is null
+	at com.bookshare.tests.CreateAccountTests.isLoginLinkPresent(CreateAccountTests.java:23)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,7 +52,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="stopTest" classname="com.bookshare.tests.CreateAccountTests" time="0.001">
+  <testcase name="stopTest" classname="com.bookshare.tests.CreateAccountTests" time="0.002">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.UserHelper.takeScreenshot()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getUser()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;com.bookshare.fw.UserHelper.takeScreenshot()&quot; because the return value of &quot;com.bookshare.fw.ApplicationManager.getUser()&quot; is null
 	at com.bookshare.tests.TestBase.stopTest(TestBase.java:43)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -108,7 +108,7 @@
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <system-out><![CDATA[13:26:45.191 [Test worker] INFO com.bookshare.tests.TestBase -- Start test isLoginLinkPresent with data: []
+  <system-out><![CDATA[21:33:51.035 [Test worker] INFO com.bookshare.tests.TestBase -- Start test isLoginLinkPresent with data: []
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
