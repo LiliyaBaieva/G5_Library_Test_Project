@@ -42,5 +42,3 @@ public class LoginTests extends TestBase{
   }
 
 }
-
-// loginRegisteredUser(), loginNotRegisteredUser(), loginWithEmptyEmail(), loginWithEmptyPassword()
