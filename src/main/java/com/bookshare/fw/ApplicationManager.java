@@ -3,6 +3,7 @@ package com.bookshare.fw;
 import java.time.Duration;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -14,6 +15,11 @@ public class ApplicationManager {
   WebDriver driver;
 
   UserHelper user;
+  HeaderHelper header;
+
+  public HeaderHelper getHeader() {
+    return header;
+  }
 
   public void setUser(UserHelper user) {
     this.user = user;
@@ -26,7 +32,18 @@ public class ApplicationManager {
   public void init () {
 
     if(browser.equalsIgnoreCase("chrome")){
-      driver = new ChromeDriver();
+      System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver.exe");
+//      driver = new ChromeDriver();
+      // Создаем объект ChromeOptions и настраиваем опции
+      ChromeOptions options = new ChromeOptions();
+//      options.addArguments("--disable-extensions");
+//      options.addArguments("--disable-gpu");
+//      options.addArguments("--headless"); // Опционально: запуск в безголовом режиме
+//      options.addArguments("--no-sandbox"); // Опционально: для безопасного запуска в контейнере
+//      options.addArguments("--disable-dev-shm-usage"); // Опционально: для безопасного запуска в контейнере
+      options.addArguments("--proxy-server=http://localhost:3000"); // Указываем адрес localhost:3000
+      driver = new ChromeDriver(options);
+
     } else if (browser.equalsIgnoreCase("firefox")) {
       driver = new FirefoxDriver();
     } else if (browser.equalsIgnoreCase("edge")) {
