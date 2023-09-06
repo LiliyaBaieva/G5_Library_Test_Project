@@ -33,4 +33,13 @@ public class UserHelper extends BaseHelper {
     type(By.cssSelector("[placeholder='Repeat password']"), confPass);
     click(By.id("checkbox-id"));
   }
+
+  public void fillInLoginForm(String email, String password) {
+    type(By.cssSelector("[name='email']"), email);
+    type(By.cssSelector("[name='password']"), password);
+  }
+
+  public void clickOnLogInButton() {
+    click(By.xpath("//button[.='Continue']")); //TODO "Continue" -> "Log In"
+  }
 }
