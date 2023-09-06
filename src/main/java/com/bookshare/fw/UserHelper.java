@@ -42,4 +42,10 @@ public class UserHelper extends BaseHelper {
   public void clickOnLogInButton() {
     click(By.xpath("//button[.='Continue']")); //TODO "Continue" -> "Log In"
   }
+
+  public static void loginUser(String email, String Password) {
+
+  }
+
+
 }

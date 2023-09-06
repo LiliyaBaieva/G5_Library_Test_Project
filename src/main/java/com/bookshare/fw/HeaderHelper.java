@@ -24,4 +24,19 @@ public class HeaderHelper extends BaseHelper {
   public void clickOnSignUpButton() {
     click(By.xpath("//a[.='Sign Up']"));
   }
+
+  public boolean isLogOutButtonPresent() {
+    return isElementPresent(By.xpath("")); // TODO add web element
+  }
+
+  public boolean isLogInAndSignUpLinkPresent() {
+    if(isLoginLinkPresent() && isSignUpLinkPresent()){
+      return true;
+    }
+    return false;
+  }
+
+  private boolean isSignUpLinkPresent() {
+    return isElementPresent(By.xpath("")); //TODO add web element
+  }
 }
