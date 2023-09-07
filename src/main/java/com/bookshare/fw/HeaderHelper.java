@@ -26,7 +26,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isLogOutButtonPresent() {
-    return isElementPresent(By.xpath("")); // TODO add web element
+    return isElementPresent(By.xpath("")); // TODO add locator
   }
 
   public boolean isLogInAndSignUpLinkPresent() {
@@ -37,10 +37,14 @@ public class HeaderHelper extends BaseHelper {
   }
 
   private boolean isSignUpLinkPresent() {
-    return isElementPresent(By.xpath("")); //TODO add web element
+    return isElementPresent(By.xpath("")); //TODO add locator
   }
 
   public boolean isMyLibraryLinkPresent() {
     return isElementPresent(By.xpath("//a[.='My library']"));
+  }
+
+  public void clickOnMyProfileButton() {
+    click(By.xpath("")); // TODO locator
   }
 }

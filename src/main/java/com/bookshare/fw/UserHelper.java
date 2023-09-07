@@ -51,4 +51,25 @@ public class UserHelper extends BaseHelper {
   public void clickOnYesButtonToConfirmLogOut() {
     click(By.xpath("//button[.='Yes']"));
   }
+
+  public void fillInUpdateForm(String firstName, String lastName, String postalCode) {
+    type(By.xpath(""), firstName); // TODO add locator
+    type(By.xpath(""), lastName); // TODO add locator
+    type(By.xpath(""), postalCode); // TODO add locator
+  }
+
+  public void clickOnSaveButton() {
+    click(By.xpath("")); // TODO add locator
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
