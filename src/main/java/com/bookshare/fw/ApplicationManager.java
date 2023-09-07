@@ -16,6 +16,12 @@ public class ApplicationManager {
   UserHelper user;
   HeaderHelper header;
 
+  FooterHelper footer;
+
+  public FooterHelper getFooter() {
+    return footer;
+  }
+
   public HeaderHelper getHeader() {
     return header;
   }

@@ -39,4 +39,8 @@ public class HeaderHelper extends BaseHelper {
   private boolean isSignUpLinkPresent() {
     return isElementPresent(By.xpath("")); //TODO add web element
   }
+
+  public boolean isMyLibraryLinkPresent() {
+    return isElementPresent(By.xpath("//a[.='My library']"));
+  }
 }

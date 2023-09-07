@@ -48,4 +48,7 @@ public class UserHelper extends BaseHelper {
   }
 
 
+  public void clickOnYesButtonToConfirmLogOut() {
+    click(By.xpath("//button[.='Yes']"));
+  }
 }

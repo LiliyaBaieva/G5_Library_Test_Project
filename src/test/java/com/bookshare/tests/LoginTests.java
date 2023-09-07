@@ -1,5 +1,6 @@
 package com.bookshare.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,6 +19,7 @@ public class LoginTests extends TestBase{
     app.getHeader().clickOnLoginButton();
     app.getUser().fillInLoginForm("anna@mail.com", "$Anna.2023$");
     app.getUser().clickOnLogInButton();
+    Assert.assertTrue(app.getHeader().isMyLibraryLinkPresent());
   }
 
   @Test
@@ -25,6 +27,7 @@ public class LoginTests extends TestBase{
     app.getHeader().clickOnLoginButton();
     app.getUser().fillInLoginForm("boris@mail.com", "$Boris.2023$");
     app.getUser().clickOnLogInButton();
+    //TODO add error message
   }
 
   @Test
@@ -32,6 +35,7 @@ public class LoginTests extends TestBase{
     app.getHeader().clickOnLoginButton();
     app.getUser().fillInLoginForm(null, "$Anna.2023$");
     app.getUser().clickOnLogInButton();
+    //TODO add error message
   }
 
   @Test
@@ -39,6 +43,7 @@ public class LoginTests extends TestBase{
     app.getHeader().clickOnLoginButton();
     app.getUser().fillInLoginForm("anna@mail.com", null);
     app.getUser().clickOnLogInButton();
+    //TODO add error message
   }
 
 }

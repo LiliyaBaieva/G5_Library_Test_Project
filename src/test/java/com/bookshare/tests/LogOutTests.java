@@ -17,6 +17,7 @@ public class LogOutTests extends TestBase{
   @Test
   public void logOutUser(){
     app.getHeader().clickOnLogOutButton();
+    app.getUser().clickOnYesButtonToConfirmLogOut();
     Assert.assertTrue(app.getHeader().isLogInAndSignUpLinkPresent());
   }
 
