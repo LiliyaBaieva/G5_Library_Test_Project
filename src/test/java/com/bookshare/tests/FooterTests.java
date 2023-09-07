@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 
 public class FooterTests extends TestBase{
 
+  // TODO Precondition пролистнуть вниз
+
   @Test
   public void contactIsPresentTest(){
     Assert.assertTrue(app.getFooter().isContactPresent());

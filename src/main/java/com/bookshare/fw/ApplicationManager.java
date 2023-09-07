@@ -26,10 +26,6 @@ public class ApplicationManager {
     return header;
   }
 
-  public void setUser(UserHelper user) {
-    this.user = user;
-  }
-
   public ApplicationManager(String browser) {
     this.browser = browser;
   }
@@ -38,35 +34,6 @@ public class ApplicationManager {
 
     if(browser.equalsIgnoreCase("chrome")){
       driver = new ChromeDriver();
-
-//      System.setProperty("webdriver.chrome.driver", "C:\\Tools\\chromedriver.exe");
-
-
-      // СПОСОБ 1
-
-//      ChromeOptions options = new ChromeOptions();
-
-      // Создаем объект ChromeOptions и настраиваем опции
-//      options.addArguments("--disable-extensions");
-//      options.addArguments("--disable-gpu");
-//      options.addArguments("--headless"); // Опционально: запуск в безголовом режиме
-//      options.addArguments("--no-sandbox"); // Опционально: для безопасного запуска в контейнере
-//      options.addArguments("--disable-dev-shm-usage"); // Опционально: для безопасного запуска в контейнере
-//      options.addArguments("--proxy-server=http://localhost:3000"); // Указываем адрес localhost:3000
-//      driver = new ChromeDriver(options);
-
-      // СПОСОБ 2
-
-//      ChromeOptions options = new ChromeOptions();
-//      options.addArguments("remote-allow-origins=*");
-//      driver = new ChromeDriver(options);
-
-      // СПОСОБ 3
-
-//      ChromeOptions options = new ChromeOptions();
-//      options.addArguments("--proxy-server=*");
-//      driver = new ChromeDriver(options);
-
 
     } else if (browser.equalsIgnoreCase("firefox")) {
       driver = new FirefoxDriver();
@@ -79,6 +46,10 @@ public class ApplicationManager {
     driver.get("http://localhost:3000");
     driver.manage().window().maximize();
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
+    user = new UserHelper(driver);
+    header = new HeaderHelper(driver);
+    footer = new FooterHelper(driver);
 
   }
 

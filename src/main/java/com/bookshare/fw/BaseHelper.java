@@ -48,7 +48,7 @@ public class BaseHelper {
 
   }
 
-  protected void type(By locator, String text){
+  public void type(By locator, String text){
     if (text != null) {
       driver.findElement(locator).click();
       driver.findElement(locator).clear();

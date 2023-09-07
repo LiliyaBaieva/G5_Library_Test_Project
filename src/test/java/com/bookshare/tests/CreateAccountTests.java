@@ -16,14 +16,6 @@ public class CreateAccountTests extends TestBase {
     app.getHeader().clickOnLoginButton();
   }
 
-
-//  @Test // проверка работает ли вообще
-//  public void isLoginLinkPresent(){
-//    app.getHeader().isLoginLinkPresent();
-////    app.getHeader().clickOnSignUpButton();
-//
-//  }
-
   @Test(dataProviderClass = DataProvider.class, dataProvider = "addUserFromCsvFile")
   public void RegistrationUserFromCsvPositive(User user){
     app.getHeader().clickOnSignUpButton();
