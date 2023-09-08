@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 public class HeaderHelper extends BaseHelper {
 
+  UserHelper user;
+
   public HeaderHelper(WebDriver driver) {
     super(driver);
   }
@@ -46,5 +48,30 @@ public class HeaderHelper extends BaseHelper {
 
   public void clickOnMyProfileButton() {
     click(By.xpath("//a[.='My profile']"));
+  }
+
+  public boolean isAElementsInHeaderNotLoggedInUserPresent() {
+    if(isLogoPresent() && isLoginLinkPresent() && isSignUpLinkPresent()){
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isLogoPresent() {
+    return isElementPresent(By.cssSelector("[alt='logo']"));
+  }
+
+  public boolean isAElementsInHeaderLoggedInUserPresent(String email, String password) {
+    user.loginUser(email, password);
+    if(isLogoPresent() && isMyLibraryLinkPresent()
+        && isMyProfileLinkPresent() && isLogOutButtonPresent()){
+      return true;
+    }
+    return false;
+  }
+
+  public boolean isMyProfileLinkPresent() {
+    return isElementPresent(By.xpath("//a[.='My profile']"));
+
   }
 }
