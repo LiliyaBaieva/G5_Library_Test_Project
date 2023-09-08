@@ -20,7 +20,8 @@ public class MyProfileTests extends TestBase{
     app.getHeader().clickOnMyProfileButton();
     app.getUser().fillInUpdateForm("Anna", "Lou", "10115");
     app.getUser().clickOnSaveButton();
-    Assert.assertEquals("", "10115"); // TODO add assert, check index
+    Assert.assertTrue(app.getUser()
+        .isContactHasUpdatedData("Anna", "Lou", "10115"));
   }
 
 }

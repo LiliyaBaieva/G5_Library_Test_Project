@@ -3,8 +3,12 @@ package com.bookshare.fw;
 import com.bookshare.model.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
 public class UserHelper extends BaseHelper {
+
+  HeaderHelper header;
 
   public UserHelper(WebDriver driver) {
     super(driver);
@@ -40,7 +44,7 @@ public class UserHelper extends BaseHelper {
   }
 
   public void clickOnLogInButton() {
-    click(By.xpath("//button[.='Continue']")); //TODO "Continue" -> "Log In"
+    click(By.xpath("//button[.='Log In']"));
   }
 
   public static void loginUser(String email, String Password) {
@@ -53,13 +57,31 @@ public class UserHelper extends BaseHelper {
   }
 
   public void fillInUpdateForm(String firstName, String lastName, String postalCode) {
-    type(By.xpath(""), firstName); // TODO add locator
-    type(By.xpath(""), lastName); // TODO add locator
-    type(By.xpath(""), postalCode); // TODO add locator
+    type(By.cssSelector("[name='firstName']"), firstName);
+    type(By.cssSelector("[name='lastName']"), lastName);
+    type(By.cssSelector("[name='postalCode']"), postalCode);
   }
 
   public void clickOnSaveButton() {
-    click(By.xpath("")); // TODO add locator
+    click(By.xpath("//button[.='Save']"));
+  }
+
+  @FindBy(css ="[name='firstName']")
+  WebElement firstNameElement;
+  @FindBy(css = "[name='lastName']")
+  WebElement lastNameElement;
+  @FindBy( css = "[name='postalCode']")
+  WebElement postalCodeElement;
+
+  public boolean isContactHasUpdatedData(String firstName, String lastName, String postalCode) {
+    header.clickOnMyProfileButton();
+    if(shouldHaveText(firstNameElement, firstName, 10)
+        && shouldHaveText(lastNameElement, lastName, 10)
+        && shouldHaveText(postalCodeElement, postalCode, 10)
+    ){
+      return true;
+    }
+    return false;
   }
 }
 

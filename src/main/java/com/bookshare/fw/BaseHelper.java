@@ -3,6 +3,8 @@ package com.bookshare.fw;
 import com.google.common.io.Files;
 import java.io.File;
 import java.io.IOException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
@@ -10,6 +12,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -75,6 +78,29 @@ public class BaseHelper {
 
     return screenshot.getAbsolutePath();
 
+  }
+
+  public void verifyLinks(String linkURL){
+    try{
+      URL url = new URL(linkURL);
+
+      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+      connection.setConnectTimeout(5000);
+      connection.connect();
+
+      if(connection.getResponseCode() >= 400){
+        System.out.println(linkURL + " - " + connection.getResponseMessage());
+      } else {
+        System.out.println(linkURL + " - " + connection.getResponseMessage());
+      }
+    } catch (Exception e){
+      System.out.println(linkURL + " - " + e.getMessage() + " is broken link");
+    }
+  }
+
+  public boolean shouldHaveText(WebElement locator, String text, int time){
+    return new WebDriverWait(driver, Duration.ofSeconds(time))
+        .until(ExpectedConditions.textToBePresentInElement(locator, text));
   }
 
 }

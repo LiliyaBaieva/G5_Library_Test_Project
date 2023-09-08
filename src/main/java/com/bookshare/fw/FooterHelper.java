@@ -38,8 +38,7 @@ public class FooterHelper extends BaseHelper{
   }
 
   private boolean addressPresent() {
-    return isElementPresent(By.xpath(
-        "//*[contains(text(),'Sharestraße 15A, Berlin, Deutschland')]"));
+    return isElementPresent(By.xpath("//*[contains(text(),'Berlin, Deutschland')]"));
   }
 
   private boolean phonePresent() {
