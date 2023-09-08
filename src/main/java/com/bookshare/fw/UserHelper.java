@@ -47,8 +47,10 @@ public class UserHelper extends BaseHelper {
     click(By.xpath("//button[.='Log In']"));
   }
 
-  public static void loginUser(String email, String Password) {
-
+  public void loginUser(String email, String password) {
+    header.clickOnLoginButton();
+    fillInLoginForm(email, password);
+    clickOnLogInButton();
   }
 
 

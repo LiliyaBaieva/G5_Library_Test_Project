@@ -16,33 +16,25 @@ public class LoginTests extends TestBase{
 
   @Test
   public void loginRegisteredUser(){
-    app.getHeader().clickOnLoginButton();
-    app.getUser().fillInLoginForm("anna@mail.com", "$Anna.2023$");
-    app.getUser().clickOnLogInButton();
+    app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
     Assert.assertTrue(app.getHeader().isMyLibraryLinkPresent());
   }
 
   @Test
   public void loginNotRegisteredUser(){
-    app.getHeader().clickOnLoginButton();
-    app.getUser().fillInLoginForm("boris@mail.com", "$Boris.2023$");
-    app.getUser().clickOnLogInButton();
+    app.getUser().loginUser("boris@mail.com", "$Boris.2023$");
     //TODO add error message
   }
 
   @Test
   public void loginWithEmptyEmail(){
-    app.getHeader().clickOnLoginButton();
-    app.getUser().fillInLoginForm(null, "$Anna.2023$");
-    app.getUser().clickOnLogInButton();
+    app.getUser().loginUser(null, "$Anna.2023$");
     //TODO add error message
   }
 
   @Test
   public void loginWithEmptyPassword(){
-    app.getHeader().clickOnLoginButton();
-    app.getUser().fillInLoginForm("anna@mail.com", null);
-    app.getUser().clickOnLogInButton();
+    app.getUser().loginUser("anna@mail.com", null);
     //TODO add error message
   }
 
