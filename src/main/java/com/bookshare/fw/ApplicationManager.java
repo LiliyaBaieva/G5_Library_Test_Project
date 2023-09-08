@@ -18,13 +18,7 @@ public class ApplicationManager {
 
   FooterHelper footer;
 
-  public FooterHelper getFooter() {
-    return footer;
-  }
-
-  public HeaderHelper getHeader() {
-    return header;
-  }
+  BaseHelper book;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -50,6 +44,7 @@ public class ApplicationManager {
     user = new UserHelper(driver);
     header = new HeaderHelper(driver);
     footer = new FooterHelper(driver);
+    book = new BookHelper(driver);
 
   }
 
@@ -59,5 +54,17 @@ public class ApplicationManager {
 
   public UserHelper getUser() {
     return user;
+  }
+
+  public FooterHelper getFooter() {
+    return footer;
+  }
+
+  public HeaderHelper getHeader() {
+    return header;
+  }
+
+  public BaseHelper getBook() {
+    return book;
   }
 }

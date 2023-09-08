@@ -12,15 +12,15 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isLoginLinkPresent() {
-    return isElementPresent(By.xpath("//a[.='Sign Up']"));
+    return isElementPresent(By.xpath("//a[.='Login']"));
   }
 
   public void clickOnLogOutButton() {
     click(By.xpath("//a[.='Log out']"));
   }
 
-  public void clickOnLoginButton() {
-    click(By.xpath("//a[.='Sign Up']"));
+  public void clickOnLoginLink() {
+    click(By.xpath("//a[.='Login']"));
   }
 
   public void clickOnSignUpButton() {
@@ -73,5 +73,9 @@ public class HeaderHelper extends BaseHelper {
   public boolean isMyProfileLinkPresent() {
     return isElementPresent(By.xpath("//a[.='My profile']"));
 
+  }
+
+  public void clickOnMyLibraryLink() {
+    click(By.xpath("//a[.='My library']"));
   }
 }

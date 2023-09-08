@@ -10,8 +10,10 @@ public class UserHelper extends BaseHelper {
 
   HeaderHelper header;
 
+
   public UserHelper(WebDriver driver) {
     super(driver);
+    header = new HeaderHelper(driver);
   }
 
   public void fillInRegistrationFormFromCsv(User user) {
@@ -48,7 +50,7 @@ public class UserHelper extends BaseHelper {
   }
 
   public void loginUser(String email, String password) {
-    header.clickOnLoginButton();
+    header.clickOnLoginLink();
     fillInLoginForm(email, password);
     clickOnLogInButton();
   }

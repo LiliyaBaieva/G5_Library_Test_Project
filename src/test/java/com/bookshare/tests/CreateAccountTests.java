@@ -13,7 +13,7 @@ public class CreateAccountTests extends TestBase {
     if(!app.getHeader().isLoginLinkPresent()){
       app.getHeader().clickOnLogOutButton();
     }
-    app.getHeader().clickOnLoginButton();
+    app.getHeader().clickOnLoginLink();
   }
 
   @Test(dataProviderClass = DataProvider.class, dataProvider = "addUserFromCsvFile")

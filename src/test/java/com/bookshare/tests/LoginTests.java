@@ -11,12 +11,16 @@ public class LoginTests extends TestBase{
     if(!app.getHeader().isLoginLinkPresent()){
       app.getHeader().clickOnLogOutButton();
     }
-    app.getHeader().clickOnLoginButton();
   }
 
   @Test
   public void loginRegisteredUser(){
     app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
+    Assert.assertTrue(app.getHeader().isMyLibraryLinkPresent());
+  }
+  @Test
+  public void loginRegisteredUser2(){
+    app.getUser().loginUser("n2@gmail.com", "Qwerty007!");
     Assert.assertTrue(app.getHeader().isMyLibraryLinkPresent());
   }
 
