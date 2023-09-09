@@ -8,11 +8,14 @@ import java.net.URL;
 import java.time.Duration;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Rectangle;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -103,43 +106,29 @@ public class BaseHelper {
         .until(ExpectedConditions.textToBePresentInElement(locator, text));
   }
 
-  public void clickOnAddNewBookLink() {
-    click(By.xpath("//a[.=' Add new books']"));
+  public void clickWithJSExecutor(WebElement element, int x, int y){
+    JavascriptExecutor jsEx = (JavascriptExecutor) driver;
+    jsEx.executeScript("window.scrollBy(" + x + "," + y + ")");
+    element.click();
   }
 
-  public void fillInNewBookForm(String picPath, String title, String author, String genre,
-      String numberOfPages, String language, String year, String description) {
-    type(By.cssSelector("[name='cover']"), picPath);
-    type(By.cssSelector("[name='title']"), title);
-    type(By.cssSelector("[name='author']"), author);
-    selectGenre(genre);
-    type(By.cssSelector("[name='pages']"), numberOfPages);
-    selectLanguage(language);
-    type(By.cssSelector("[name='publisherDate']"), year);
-    type(By.cssSelector("textarea"), description);
+  public void clickWithRectangle(WebElement element, int x, int y){
+
+    Rectangle rectangle = element.getRect();
+
+    int offSetX = rectangle.getWidth() / x;
+    int offSetY = rectangle.getHeight() / y;
+
+    Actions actions = new Actions(driver);
+    actions.moveToElement(element).perform();
+    actions.moveByOffset(-offSetX, -offSetY).click().perform();
+
   }
 
-  private void selectLanguage(String language) {
-    click(By.cssSelector("[name='languageId']"));
-    click(By.xpath("//option[.='"+ language + "']"));
+  public String getText(By locator){
+    return driver.findElement(locator).getAttribute("value");
   }
 
-  private void selectGenre(String genre) {
-    click(By.cssSelector("[name='categoryId']"));
-    click(By.xpath("//option[.='"+ genre + "']"));
-  }
-
-  public void clickOnCancelButton() {
-    click(By.xpath("//button[.='Cancel']"));
-  }
-
-  public boolean isAddBookLinkPresent() {
-    return isElementPresent(By.xpath("//a[.=' Add new books']"));
-  }
-
-  public void clickOnAddBookButton() {
-    click(By.xpath("//button[.='Add']"));
-  }
 }
 
 
