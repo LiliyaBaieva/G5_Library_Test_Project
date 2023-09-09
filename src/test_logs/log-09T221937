@@ -1,4 +1,0 @@
-3736 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test getBookNegativeTest with data: []
-3954 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: getBookNegativeTest
-3954 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
-3954 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

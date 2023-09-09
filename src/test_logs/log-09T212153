@@ -1,4 +1,0 @@
-5481 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test AddNewBookPositiveTest with data: []
-8958 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: AddNewBookPositiveTest
-8958 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
-8958 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

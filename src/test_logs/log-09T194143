@@ -1,4 +1,0 @@
-5268 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test loginNotRegisteredUser with data: []
-5889 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: loginNotRegisteredUser
-5889 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
-5889 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
