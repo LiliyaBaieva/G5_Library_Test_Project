@@ -22,7 +22,7 @@ public class BookHelper extends BaseHelper{
     type(By.cssSelector("[name='pages']"), numberOfPages);
     selectLanguage(language);
     type(By.cssSelector("[name='publisherDate']"), year);
-    type(By.cssSelector("textarea"), description);
+    type(By.cssSelector("textarea.form__input"), description);
   }
 
   private void selectLanguage(String language) {
@@ -48,7 +48,12 @@ public class BookHelper extends BaseHelper{
   }
 
   public boolean isBookInMyPagePresent(String title) {
-    return false;
+    clickMyBookLink();
+    return isElementPresent(By.xpath("//*[.='" + title + "']"));
+  }
+
+  public void clickMyBookLink() {
+    click(By.xpath("//button[.='My books ']"));
   }
 
   public void clickMoreInfoOfBookLink(int numOfBook) {
