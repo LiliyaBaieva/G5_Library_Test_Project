@@ -37,3 +37,4 @@ settings.gradle
 
 src/test_logs/
 test_logs
+src/test_logs
