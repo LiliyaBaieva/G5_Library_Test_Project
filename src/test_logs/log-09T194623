@@ -1,0 +1,4 @@
+4262 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test loginRegisteredUser with data: []
+5682 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: loginRegisteredUser
+5682 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+5682 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

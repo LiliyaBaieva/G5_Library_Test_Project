@@ -3,8 +3,6 @@ package com.bookshare.fw;
 import com.bookshare.model.User;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
 
 public class UserHelper extends BaseHelper {
 
@@ -20,7 +18,7 @@ public class UserHelper extends BaseHelper {
     type(By.cssSelector("[name='email']"), user.getEmail());
     type(By.cssSelector("[name='password']"), user.getPassword());
     type(By.cssSelector("[placeholder='Repeat password']"), user.getConfirmPassword());
-    click(By.id("checkbox-id"));
+    click(By.cssSelector(":nth-child(4) > label:nth-child(2)"));
   }
 
   public void clickOnSignUpButton() {
@@ -37,7 +35,7 @@ public class UserHelper extends BaseHelper {
     type(By.cssSelector("[name='email']"), email);
     type(By.cssSelector("[name='password']"), password);
     type(By.cssSelector("[placeholder='Repeat password']"), confPass);
-    click(By.id("checkbox-id"));
+    click(By.cssSelector(":nth-child(4) > label:nth-child(2)"));
   }
 
   public void fillInLoginForm(String email, String password) {
@@ -70,23 +68,44 @@ public class UserHelper extends BaseHelper {
     click(By.xpath("//button[.='Save']"));
   }
 
-  @FindBy(css ="[name='firstName']")
-  WebElement firstNameElement;
-  @FindBy(css = "[name='lastName']")
-  WebElement lastNameElement;
-  @FindBy( css = "[name='postalCode']")
-  WebElement postalCodeElement;
+//  @FindBy(css ="[name='firstName']")
+//  WebElement firstNameElement;
+//  @FindBy(css = "[name='lastName']")
+//  WebElement lastNameElement;
+//  @FindBy( css = "[name='postalCode']")
+//  WebElement postalCodeElement;
 
-  public boolean isContactHasUpdatedData(String firstName, String lastName, String postalCode) {
-    header.clickOnMyProfileButton();
-    if(shouldHaveText(firstNameElement, firstName, 10)
-        && shouldHaveText(lastNameElement, lastName, 10)
-        && shouldHaveText(postalCodeElement, postalCode, 10)
-    ){
-      return true;
-    }
-    return false;
+//  public boolean isContactHasUpdatedData(String firstName, String lastName, String postalCode) {
+//    header.clickOnMyProfileLink();
+//    if(shouldHaveText(firstNameElement, firstName, 10)
+//        && shouldHaveText(lastNameElement, lastName, 10)
+//        && shouldHaveText(postalCodeElement, postalCode, 10)
+//    ){
+//      return true;
+//    }
+//    return false;
+//  }
+
+  public boolean isSignUpButtonPresent() {
+    return isElementPresent(By.xpath("//button[.='Sign Up']"));
   }
+
+  public boolean isLoginButtonPresent() {
+    return isElementPresent(By.xpath("//button[.='Log In']"));
+  }
+
+  public String firstnameGetText() {
+    return getText(By.cssSelector("[name='firstName']"));
+  }
+
+  public String lastnameGetText() {
+    return getText(By.cssSelector("[name='lastName']"));
+  }
+
+  public String postalCodeGetText() {
+    return getText(By.cssSelector("[name='postalCode']"));
+  }
+
 }
 
 

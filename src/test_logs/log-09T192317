@@ -1,0 +1,4 @@
+4524 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserWithoutCheckBoxNegative with data: []
+16072 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: RegistrationUserWithoutCheckBoxNegative
+16072 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+16073 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

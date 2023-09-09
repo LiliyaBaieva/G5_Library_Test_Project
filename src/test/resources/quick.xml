@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Smoke" verbose="1" >
+
+  <test name="Smoke" >
+    <classes>
+      <class name="com.bookshare.tests.LoginTests" />
+      <class name="com.bookshare.tests.CreateAccountTests" />
+      <class name="com.bookshare.tests.LogOutTests" />
+      <class name="com.bookshare.tests.HeaderTests" />
+      <class name="com.bookshare.tests.FooterTests" />
+      <class name="com.bookshare.tests.MyProfileTests" />
+      <class name="com.bookshare.tests.AddBookTests" />
+    </classes>
+  </test>
+
+</suite>

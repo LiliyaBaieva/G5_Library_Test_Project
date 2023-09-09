@@ -33,7 +33,9 @@ public class AddBookTests extends TestBase{
             + " Next to the victim's body, the police found unknown mysterious ciphers."
     );
     app.getBook().clickOnAddBookButton();
-        // TODO    Assert
+
+//    Assert.assertTrue(app.getBook().isBookInMyPagePresent("The Da Vinci Code")); //TODO    Assert
+
   }
 
   @Test

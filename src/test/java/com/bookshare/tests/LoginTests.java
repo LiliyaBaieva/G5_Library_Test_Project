@@ -27,19 +27,22 @@ public class LoginTests extends TestBase{
   @Test
   public void loginNotRegisteredUser(){
     app.getUser().loginUser("boris@mail.com", "$Boris.2023$");
-    //TODO add error message
+    Assert.assertTrue(app.getUser().isLoginButtonPresent());
+//    Assert.assertTrue(app.getUser().isAlertPresent());//TODO add error message
   }
 
   @Test
   public void loginWithEmptyEmail(){
     app.getUser().loginUser(null, "$Anna.2023$");
-    //TODO add error message
+    Assert.assertTrue(app.getUser().isLoginButtonPresent());
+//    Assert.assertTrue(app.getUser().isAlertPresent());//TODO add error message
   }
 
   @Test
   public void loginWithEmptyPassword(){
     app.getUser().loginUser("anna@mail.com", null);
-    //TODO add error message
+    Assert.assertTrue(app.getUser().isLoginButtonPresent());
+//    Assert.assertTrue(app.getUser().isAlertPresent());//TODO add error message
   }
 
 }

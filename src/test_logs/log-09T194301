@@ -1,0 +1,4 @@
+4400 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test loginWithEmptyEmail with data: []
+5030 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: loginWithEmptyEmail
+5031 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+5031 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

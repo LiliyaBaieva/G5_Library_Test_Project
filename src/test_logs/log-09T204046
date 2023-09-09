@@ -1,0 +1,4 @@
+3742 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test updateUserInfo with data: []
+15568 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: updateUserInfo
+15568 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+15568 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

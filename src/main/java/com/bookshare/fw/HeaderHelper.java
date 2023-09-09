@@ -46,7 +46,7 @@ public class HeaderHelper extends BaseHelper {
     return isElementPresent(By.xpath("//a[.='My library']"));
   }
 
-  public void clickOnMyProfileButton() {
+  public void clickOnMyProfileLink() {
     click(By.xpath("//a[.='My profile']"));
   }
 

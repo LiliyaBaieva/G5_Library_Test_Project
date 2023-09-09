@@ -18,7 +18,7 @@ public class ApplicationManager {
 
   FooterHelper footer;
 
-  BaseHelper book;
+  BookHelper book;
 
   public ApplicationManager(String browser) {
     this.browser = browser;
@@ -64,7 +64,7 @@ public class ApplicationManager {
     return header;
   }
 
-  public BaseHelper getBook() {
+  public BookHelper getBook() {
     return book;
   }
 }

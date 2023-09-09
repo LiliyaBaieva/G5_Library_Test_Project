@@ -1,0 +1,9 @@
+5528 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserFromCsvNegative with data: [com.bookshare.model.User@9e2ad91]
+6555 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: RegistrationUserFromCsvNegative
+6555 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+6556 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+6557 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserFromCsvNegative with data: [com.bookshare.model.User@4715ae33]
+7555 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: RegistrationUserFromCsvNegative
+7556 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+7556 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+7560 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserFromCsvNegative with data: [com.bookshare.model.User@65e21ce3]

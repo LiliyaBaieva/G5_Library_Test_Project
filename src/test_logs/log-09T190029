@@ -1,0 +1,24 @@
+4934 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserFromCsvPositive with data: [com.bookshare.model.User@64524dd]
+16171 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: RegistrationUserFromCsvPositive
+16172 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+16172 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+16174 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test RegistrationUserFromCsvPositive with data: [com.bookshare.model.User@71978f46]
+27189 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: RegistrationUserFromCsvPositive
+27189 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+27189 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+27279 [AsyncHttpClient-1-4] WARN  o.a.netty.handler.WebSocketHandler -- onError
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)

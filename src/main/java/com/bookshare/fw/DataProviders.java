@@ -13,7 +13,7 @@ import org.testng.annotations.DataProvider;
 public class DataProviders {
 
   @DataProvider
-  public Iterator<Object[]> addUserFromCsvFile() throws IOException{
+  public Iterator<Object[]> addUserFromCsvFile() throws IOException {
     List<Object[]> list = new ArrayList<>();
 
     BufferedReader reader = new BufferedReader(new FileReader(new File(
@@ -22,17 +22,18 @@ public class DataProviders {
 
     String line = reader.readLine();
 
-    while(line != null){
-      String[] split = line.split(",");
+    while (line != null) {
+      String[] split = line.split(";");
       list.add(new Object[]{new User()
-                                .setEmail(split[0])
-                                .setPassword(split[1])
-                                .setConfirmPassword(split[2])});
+          .setEmail(split[0])
+          .setPassword(split[1])
+          .setConfirmPassword(split[2])});
       line = reader.readLine();
     }
     return list.iterator();
   }
 
+  @DataProvider
   public Iterator<Object[]> addUserFromCsvFileNegative() throws IOException{
     List<Object[]> list = new ArrayList<>();
 
@@ -43,7 +44,7 @@ public class DataProviders {
     String line = reader.readLine();
 
     while(line != null){
-      String[] split = line.split(",");
+      String[] split = line.split(";");
       list.add(new Object[]{new User()
                                 .setEmail(split[0])
                                 .setPassword(split[1])
@@ -52,7 +53,5 @@ public class DataProviders {
     }
     return list.iterator();
   }
-
-
 
 }
