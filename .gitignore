@@ -34,5 +34,6 @@ gradlew/
 settings.gradle
 *.log
 *.png
+
 src/test_logs/
 test_logs
