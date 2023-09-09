@@ -1,0 +1,4 @@
+5627 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test getBookPositiveTest with data: []
+7324 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: getBookPositiveTest
+7324 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+7324 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================

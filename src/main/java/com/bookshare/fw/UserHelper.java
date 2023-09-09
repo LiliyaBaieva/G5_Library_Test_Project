@@ -95,15 +95,15 @@ public class UserHelper extends BaseHelper {
   }
 
   public String firstnameGetText() {
-    return getText(By.cssSelector("[name='firstName']"));
+    return getTextByValue(By.cssSelector("[name='firstName']"));
   }
 
   public String lastnameGetText() {
-    return getText(By.cssSelector("[name='lastName']"));
+    return getTextByValue(By.cssSelector("[name='lastName']"));
   }
 
   public String postalCodeGetText() {
-    return getText(By.cssSelector("[name='postalCode']"));
+    return getTextByValue(By.cssSelector("[name='postalCode']"));
   }
 
 }

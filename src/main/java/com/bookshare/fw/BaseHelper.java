@@ -125,8 +125,12 @@ public class BaseHelper {
 
   }
 
-  public String getText(By locator){
+  public String getTextByValue(By locator){
     return driver.findElement(locator).getAttribute("value");
+  }
+
+  public String getText(By locator) {
+    return driver.findElement(locator).getText();
   }
 
 }

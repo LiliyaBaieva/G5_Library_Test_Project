@@ -50,4 +50,22 @@ public class BookHelper extends BaseHelper{
   public boolean isBookInMyPagePresent(String title) {
     return false;
   }
+
+  public void clickMoreInfoOfBookLink(int numOfBook) {
+    click(By.xpath("//div[" + numOfBook + "]/div[1]/div[1]/button[1]"));
+  }
+
+  public void clickOnGetBookButton() {
+    click(By.xpath("//button[.='Get book']"));
+  }
+
+  public String getTitleOfBook() {
+    return getText(By.cssSelector("p.book__title:nth-child(1)"));
+  }
+
+
+  public boolean isBookWithTitleInWaitingBookPresent(String title) {
+    click(By.xpath("//button[.='My waiting books']"));
+    return isElementPresent(By.xpath("//*[.='" + title + "']"));
+  }
 }
