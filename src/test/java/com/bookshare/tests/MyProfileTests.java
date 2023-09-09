@@ -17,11 +17,13 @@ public class MyProfileTests extends TestBase{
 
   @Test
   public void updateUserInfo(){
-    app.getHeader().clickOnMyProfileButton();
+    app.getHeader().clickOnMyProfileLink();
     app.getUser().fillInUpdateForm("Anna", "Lou", "10115");
     app.getUser().clickOnSaveButton();
-    Assert.assertTrue(app.getUser()
-        .isContactHasUpdatedData("Anna", "Lou", "10115"));
+
+    Assert.assertEquals(app.getUser().firstnameGetText(), "Anna");
+    Assert.assertEquals(app.getUser().lastnameGetText(), "Lou");
+    Assert.assertEquals(app.getUser().postalCodeGetText(), "10115");
   }
 
 }
