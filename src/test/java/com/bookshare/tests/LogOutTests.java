@@ -8,16 +8,13 @@ public class LogOutTests extends TestBase{
   @BeforeMethod
   public void ensurePrecondition(){
     if(!app.getHeader().isLogOutButtonPresent()){
-      app.getHeader().clickOnLoginLink();
-      app.getUser().fillInLoginForm("anna@mail.com", "$Anna.2023$");
-      app.getUser().clickOnLogInButton();
+      app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
     }
   }
 
   @Test
   public void logOutUser(){
-    app.getHeader().clickOnLogOutButton();
-    app.getUser().clickOnYesButtonToConfirmLogOut();
+    app.getUser().logOutUser();
     Assert.assertTrue(app.getHeader().isLogInAndSignUpLinkPresent());
   }
 

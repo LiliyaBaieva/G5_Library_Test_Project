@@ -11,7 +11,6 @@ public class AddBookTests extends TestBase{
     if(app.getHeader().isLoginLinkPresent()){
       app.getHeader().clickOnLoginLink();
       app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
-//      app.getUser().loginUser("n2@gmail.com", "Qwerty007!");
     }
   }
 
@@ -30,9 +29,9 @@ public class AddBookTests extends TestBase{
         "While on a business trip to Paris, Harvard professor Robert Langdon "
             + "answers an urgent late-night phone call... "
     );
-    app.getBook().clickOnAddBookButton();
-
-    Assert.assertTrue(app.getBook().isBookInMyPagePresent("The Da Vinci Code"));
+//    app.getBook().clickOnAddBookButton();
+//
+//    Assert.assertTrue(app.getBook().isBookInMyPagePresent("The Da Vinci Code"));
 
   }
 

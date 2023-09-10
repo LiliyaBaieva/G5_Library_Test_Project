@@ -66,7 +66,7 @@ public class CreateAccountTests extends TestBase {
   public void RegistrationUserWithoutConfirmPasswordNegative(){
     app.getUser().fillInRegistrationForm( "test@mail.com",  "Test%555", null);
     app.getUser().clickOnSignUpButton();
-//    Assert.assertTrue(app.getHeader().isAlertPresent()); //TODO get error message
+    Assert.assertTrue(app.getHeader().isAlertPresent()); //TODO get error message
   }
 
 

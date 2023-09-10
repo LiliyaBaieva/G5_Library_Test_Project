@@ -83,7 +83,28 @@ public class BaseHelper {
 
   }
 
-  public void verifyLinks(String linkURL){
+//  public boolean verifyLinks(String linkURL){
+//    try{
+//      URL url = new URL(linkURL);
+//
+//      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//      connection.setConnectTimeout(5000);
+//      connection.connect();
+//
+//      if(connection.getResponseCode() >= 400){
+//        System.out.println(linkURL + " - " + connection.getResponseMessage());
+//        return false;
+//      } else {
+//        System.out.println(linkURL + " - " + connection.getResponseMessage());
+//        return true;
+//      }
+//    } catch (Exception e){
+//      System.out.println(linkURL + " - " + e.getMessage() + " is broken link");
+//    }
+//  }
+
+  public boolean verifyLinks(String linkURL){
+    Boolean status = false;
     try{
       URL url = new URL(linkURL);
 
@@ -91,14 +112,14 @@ public class BaseHelper {
       connection.setConnectTimeout(5000);
       connection.connect();
 
-      if(connection.getResponseCode() >= 400){
-        System.out.println(linkURL + " - " + connection.getResponseMessage());
-      } else {
-        System.out.println(linkURL + " - " + connection.getResponseMessage());
-      }
-    } catch (Exception e){
-      System.out.println(linkURL + " - " + e.getMessage() + " is broken link");
+        if(connection.getResponseCode() <= 400){
+//          System.out.println(linkURL + " - " + connection.getResponseMessage());
+          status = true;
+        }
+      } catch (Exception e){
+        System.out.println(linkURL + " - " + e.getMessage() + " is broken link");
     }
+    return status;
   }
 
   public boolean shouldHaveText(WebElement locator, String text, int time){
