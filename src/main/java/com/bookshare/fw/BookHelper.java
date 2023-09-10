@@ -48,11 +48,11 @@ public class BookHelper extends BaseHelper{
   }
 
   public boolean isBookInMyPagePresent(String title) {
-    clickMyBookLink();
+    clickOnMyBookButton();
     return isElementPresent(By.xpath("//*[.='" + title + "']"));
   }
 
-  public void clickMyBookLink() {
+  public void clickOnMyBookButton() {
     click(By.xpath("//button[.='My books ']"));
   }
 
@@ -73,4 +73,43 @@ public class BookHelper extends BaseHelper{
     click(By.xpath("//button[.='My waiting books']"));
     return isElementPresent(By.xpath("//*[.='" + title + "']"));
   }
+
+  public boolean myBookButtonIsPresent() {
+    return isElementPresent(By.xpath("//button[.='My books ']"));
+  }
+
+  public boolean myWaitingBookIsPresent() {
+    return isElementPresent(By.xpath("//button[.='My waiting books']"));
+  }
+
+  public boolean booksToSendButtonIsPresent() {
+    return isElementPresent(By.xpath("//button[.='Books To Send']"));
+  }
+
+  public boolean myHistoryButtonIsPresent() {
+    return isElementPresent(By.xpath("//button[.='My history']"));
+  }
+
+  public void clickMoreInfoOfBookLinkByTitle(String title) {
+    click(By.xpath("(//p[.='" + title + "'])[1]/..//button"));
+  }
+
+  public void clickOnUpdateButton() {
+    click(By.xpath("//button[.='Update Book']"));
+  }
+
+  public void changeDataOfBook(String picPath, String title, String author, String genre,
+      String numberOfPages, String language, String year, String description) {
+    fillInNewBookForm(picPath, title, author, genre, numberOfPages, language, year, description);
+  }
+
+  public String getLanguageOfBook(String title) {
+    clickOnMyBookButton();
+    clickMoreInfoOfBookLinkByTitle(title);
+    return driver.findElement(By.cssSelector(" p.book__genre:nth-child(4)")).getText();
+  }
+
+//  public boolean verifyLinkMyBook() {
+//    return verifyLinks("");
+//  }
 }
