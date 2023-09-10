@@ -106,6 +106,10 @@ public class UserHelper extends BaseHelper {
     return getTextByValue(By.cssSelector("[name='postalCode']"));
   }
 
+  public void logOutUser() {
+    header.clickOnLogOutButton();
+    clickOnYesButtonToConfirmLogOut();
+  }
 }
 
 

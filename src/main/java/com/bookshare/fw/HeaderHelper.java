@@ -5,11 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class HeaderHelper extends BaseHelper {
 
-  UserHelper user;
+//  UserHelper user;
 
   public HeaderHelper(WebDriver driver) {
     super(driver);
+//    user = new UserHelper(driver);
   }
+
+
 
   public boolean isLoginLinkPresent() {
     return isElementPresent(By.xpath("//a[.='Login']"));
@@ -61,8 +64,7 @@ public class HeaderHelper extends BaseHelper {
     return isElementPresent(By.cssSelector("[alt='logo']"));
   }
 
-  public boolean isAElementsInHeaderLoggedInUserPresent(String email, String password) {
-    user.loginUser(email, password);
+  public boolean isElementsInHeaderLoggedInUserPresent() {
     if(isLogoPresent() && isMyLibraryLinkPresent()
         && isMyProfileLinkPresent() && isLogOutButtonPresent()){
       return true;
@@ -77,5 +79,36 @@ public class HeaderHelper extends BaseHelper {
 
   public void clickOnMyLibraryLink() {
     click(By.xpath("//a[.='My library']"));
+  }
+
+  public boolean verifyLinksInHeaderForLoggedInUser() {
+    if(verifyMyLibrarylink() && verifyMyProfileLink()){
+      return true;
+    }
+
+    return false;
+  }
+
+  private boolean verifyMyProfileLink() {
+    return verifyLinks("http://localhost:3000/profile");
+  }
+
+  private boolean verifyMyLibrarylink() {
+    return verifyLinks("http://localhost:3000/library");
+  }
+
+  public boolean verifyLinksInHeaderForNotLoggedInUser() {
+    if(verifyLogInLink() && verifySigUpLink()){
+      return true;
+    }
+    return false;
+  }
+
+  private boolean verifySigUpLink() {
+    return verifyLinks("http://localhost:3000/registration");
+  }
+
+  private boolean verifyLogInLink() {
+    return verifyLinks("http://localhost:3000/login");
   }
 }
