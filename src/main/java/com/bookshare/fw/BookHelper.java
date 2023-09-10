@@ -64,7 +64,8 @@ public class BookHelper extends BaseHelper{
     click(By.xpath("//button[.='Get book']"));
   }
 
-  public String getTitleOfBook() {
+  public String getTitleOfBook(int numOfBook) {
+    clickMoreInfoOfBookLink(numOfBook);
     return getText(By.cssSelector("p.book__title:nth-child(1)"));
   }
 
@@ -109,7 +110,31 @@ public class BookHelper extends BaseHelper{
     return driver.findElement(By.cssSelector(" p.book__genre:nth-child(4)")).getText();
   }
 
-//  public boolean verifyLinkMyBook() {
-//    return verifyLinks("");
-//  }
+  public void searchBookByTitle(String searchedTitle) {
+    //type on search
+    type(By.cssSelector(".form-search__input"), searchedTitle);
+
+    //click on search by title
+    click(By.xpath("")); //todo
+
+    // click search
+    click(By.xpath("")); //todo
+  }
+
+
+  public String getAuthorOfBook(int numOfBook) {
+    clickMoreInfoOfBookLink(numOfBook);
+    return getText(By.cssSelector("")); //todo get text author
+  }
+
+  public void searchBookByAuthor(String searchedAuthor) {
+    //type on search
+    type(By.cssSelector(".form-search__input"), searchedAuthor);
+
+    //click on search by Author
+    click(By.xpath("")); //todo
+
+    // click search
+    click(By.xpath("")); //todo
+  }
 }

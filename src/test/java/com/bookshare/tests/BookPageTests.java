@@ -17,8 +17,7 @@ public class BookPageTests extends TestBase{
   public void getBookLoggedInUserPositiveTest(){
     app.getHeader().clickOnLoginLink();
     app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
-    app.getBook().clickMoreInfoOfBookLink(7);
-    String title = app.getBook().getTitleOfBook();
+    String title = app.getBook().getTitleOfBook(8);
     app.getBook().clickOnGetBookButton();
     System.out.println(title);
     Assert.assertTrue(app.getBook().isBookWithTitleInWaitingBookPresent(title));
