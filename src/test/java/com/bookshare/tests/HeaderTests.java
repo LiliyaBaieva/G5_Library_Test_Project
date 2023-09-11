@@ -16,6 +16,9 @@ public class HeaderTests extends TestBase{
 
   @Test
   public void headerNotLoggedInUser(){
+    if(app.getHeader().isLogOutButtonPresent()){
+      app.getHeader().clickOnLogOutButton();
+    }
     Assert.assertTrue(app.getHeader().isAElementsInHeaderNotLoggedInUserPresent());
     Assert.assertTrue(app.getHeader().verifyLinksInHeaderForNotLoggedInUser());
   }

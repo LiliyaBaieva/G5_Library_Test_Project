@@ -71,8 +71,8 @@ public class BaseHelper {
   }
 
   public String takeScreenshot(){
-    File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-    File screenshot = new File("screenshot/screen" + System.currentTimeMillis() + ".png");
+    File tmp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); // TODO control path
+    File screenshot = new File("src/screenshots/screen" + System.currentTimeMillis() + ".png");
     try{
       Files.copy(tmp, screenshot);
     } catch (IOException e){
@@ -82,26 +82,6 @@ public class BaseHelper {
     return screenshot.getAbsolutePath();
 
   }
-
-//  public boolean verifyLinks(String linkURL){
-//    try{
-//      URL url = new URL(linkURL);
-//
-//      HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-//      connection.setConnectTimeout(5000);
-//      connection.connect();
-//
-//      if(connection.getResponseCode() >= 400){
-//        System.out.println(linkURL + " - " + connection.getResponseMessage());
-//        return false;
-//      } else {
-//        System.out.println(linkURL + " - " + connection.getResponseMessage());
-//        return true;
-//      }
-//    } catch (Exception e){
-//      System.out.println(linkURL + " - " + e.getMessage() + " is broken link");
-//    }
-//  }
 
   public boolean verifyLinks(String linkURL){
     Boolean status = false;

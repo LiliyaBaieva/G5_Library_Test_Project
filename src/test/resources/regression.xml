@@ -17,6 +17,8 @@
           <exclude name="addNewBookPositiveTest"></exclude>
         </methods>
       </class>
+      <class name="com.bookshare.tests.LeftSideMenuTests"/>
+      <class name="com.bookshare.tests.SearchBookTests"/>
     </classes>
   </test>
 

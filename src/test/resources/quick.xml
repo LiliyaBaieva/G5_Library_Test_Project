@@ -8,11 +8,7 @@
       <class name="com.bookshare.tests.LogOutTests" />
       <class name="com.bookshare.tests.HeaderTests" />
       <class name="com.bookshare.tests.FooterTests" />
-      <class name="com.bookshare.tests.AddBookTests">
-        <methods>
-          <exclude name=".*Positive."/>
-        </methods>
-      </class>
+      <class name="com.bookshare.tests.LeftSideMenuTests"/>
     </classes>
   </test>
 
