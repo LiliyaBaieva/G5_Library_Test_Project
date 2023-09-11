@@ -79,8 +79,8 @@ public class BookHelper extends BaseHelper{
     return isElementPresent(By.xpath("//button[.='My books ']"));
   }
 
-  public boolean myWaitingBookIsPresent() {
-    return isElementPresent(By.xpath("//button[.='My waiting books']"));
+  public boolean wantToReadIsPresent() {
+    return isElementPresent(By.xpath("//button[.='Want to read']"));
   }
 
   public boolean booksToSendButtonIsPresent() {

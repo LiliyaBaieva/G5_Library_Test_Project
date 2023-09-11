@@ -18,7 +18,7 @@ public class LeftSideMenuTests extends TestBase{
   @Test
   public void allButtonInLeftSideMenuIsPresent(){
     Assert.assertTrue(app.getBook().myBookButtonIsPresent());
-    Assert.assertTrue(app.getBook().myWaitingBookIsPresent());
+    Assert.assertTrue(app.getBook().wantToReadIsPresent());
     Assert.assertTrue(app.getBook().booksToSendButtonIsPresent());
     Assert.assertTrue(app.getBook().myHistoryButtonIsPresent());
   }
