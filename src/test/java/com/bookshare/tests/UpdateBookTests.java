@@ -51,7 +51,7 @@ public class UpdateBookTests extends TestBase{
         "1998",
         "Carved by old Geppetto, Pinocchio has a huge nose that grows every time he tells"
             + " a lie. Pinocchio is such a mischievous person that easily gets into various troubles.");
-    app.getBook().clickOnAddBookButton();
+    app.getBook().clickOnUpdateBookButton();
 
 //    System.out.println("*********************" + app.getBook().getLanguageOfBook("Pinocchio"));
     Assert.assertEquals(app.getBook().getLanguageOfBook("Pinocchio"), "German");

@@ -10,7 +10,7 @@ public class BookHelper extends BaseHelper{
   }
 
   public void clickOnAddNewBookLink() {
-    click(By.cssSelector(" a.library-item-left__bottom.button.button-library"));
+    click(By.cssSelector("button.library-item-left__bottom.button.button-library"));
   }
 
   public void fillInNewBookForm(String picPath, String title, String author, String genre,
@@ -107,6 +107,7 @@ public class BookHelper extends BaseHelper{
   public String getLanguageOfBook(String title) {
     clickOnMyBookButton();
     clickMoreInfoOfBookLinkByTitle(title);
+    pause(1000);
     return driver.findElement(By.cssSelector(" p.book__genre:nth-child(4)")).getText();
   }
 
@@ -136,5 +137,9 @@ public class BookHelper extends BaseHelper{
 
     // click search
     click(By.xpath("")); //todo
+  }
+
+  public void clickOnUpdateBookButton() {
+    click(By.xpath("//button[.='Update Book']"));
   }
 }
