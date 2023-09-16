@@ -4,7 +4,11 @@
 
   <test name="Smoke" >
     <classes>
-      <class name="com.bookshare.tests.LoginTests" />
+      <class name="com.bookshare.tests.LoginTests">
+        <methods>
+          <exclude name=".*Negative.*"></exclude>
+        </methods>
+      </class>
       <class name="com.bookshare.tests.LogOutTests" />
       <class name="com.bookshare.tests.HeaderTests" />
       <class name="com.bookshare.tests.FooterTests" />
