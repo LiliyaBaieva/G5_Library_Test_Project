@@ -12,12 +12,9 @@
       <class name="com.bookshare.tests.LogOutTests" />
       <class name="com.bookshare.tests.HeaderTests" />
       <class name="com.bookshare.tests.FooterTests" />
-      <class name="com.bookshare.tests.AddBookTests">
-        <methods>
-          <exclude name="addNewBookPositiveTest"></exclude>
-        </methods>
-      </class>
+      <class name="com.bookshare.tests.AddBookTests"/>
       <class name="com.bookshare.tests.LeftSideMenuTests"/>
+      <class name="com.bookshare.tests.UpdateBookTests"></class>
 <!--      <class name="com.bookshare.tests.SearchBookTests"/>-->
     </classes>
   </test>

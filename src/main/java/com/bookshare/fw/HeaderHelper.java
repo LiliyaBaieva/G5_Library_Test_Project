@@ -13,7 +13,6 @@ public class HeaderHelper extends BaseHelper {
   }
 
 
-
   public boolean isLoginLinkPresent() {
     return isElementPresent(By.xpath("//a[.='Login']"));
   }
@@ -35,7 +34,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isLogInAndSignUpLinkPresent() {
-    if(isLoginLinkPresent() && isSignUpLinkPresent()){
+    if (isLoginLinkPresent() && isSignUpLinkPresent()) {
       return true;
     }
     return false;
@@ -54,7 +53,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isAElementsInHeaderNotLoggedInUserPresent() {
-    if(isLogoPresent() && isLoginLinkPresent() && isSignUpLinkPresent()){
+    if (isLogoPresent() && isLoginLinkPresent() && isSignUpLinkPresent()) {
       return true;
     }
     return false;
@@ -65,8 +64,8 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isElementsInHeaderLoggedInUserPresent() {
-    if(isLogoPresent() && isMyLibraryLinkPresent()
-        && isMyProfileLinkPresent() && isLogOutButtonPresent()){
+    if (isLogoPresent() && isMyLibraryLinkPresent()
+        && isMyProfileLinkPresent() && isLogOutButtonPresent()) {
       return true;
     }
     return false;
@@ -82,7 +81,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean verifyLinksInHeaderForLoggedInUser() {
-    if(verifyMyLibrarylink() && verifyMyProfileLink()){
+    if (verifyMyLibrarylink() && verifyMyProfileLink()) {
       return true;
     }
 
@@ -98,7 +97,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean verifyLinksInHeaderForNotLoggedInUser() {
-    if(verifyLogInLink() && verifySigUpLink()){
+    if (verifyLogInLink() && verifySigUpLink()) {
       return true;
     }
     return false;
@@ -111,4 +110,6 @@ public class HeaderHelper extends BaseHelper {
   private boolean verifyLogInLink() {
     return verifyLinks("http://localhost:3000/login");
   }
+
 }
+

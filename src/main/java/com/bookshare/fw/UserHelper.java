@@ -110,6 +110,11 @@ public class UserHelper extends BaseHelper {
     header.clickOnLogOutButton();
     clickOnYesButtonToConfirmLogOut();
   }
+
+  public boolean isModalWindowPresent() {
+    Boolean result = isElementPresent(By.xpath(""));
+    return false;
+  }
 }
 
 

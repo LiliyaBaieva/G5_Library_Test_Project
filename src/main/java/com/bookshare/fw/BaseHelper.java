@@ -48,7 +48,7 @@ public class BaseHelper {
       return false;
     } else {
       driver.switchTo().alert();
-      alert.accept();
+      alert.dismiss();
       return true;
     }
 
