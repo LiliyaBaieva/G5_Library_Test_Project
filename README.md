@@ -15,11 +15,17 @@ According to the requirements, a map of the main functionality for testing was c
 
 The programs, tools and frameworks for testing what were used in project:
 development environment IntelliJ IDEA, programming language Java, build system Gradle, 
-framework for testing Testng, driver for testing system Selenium, version control system GitHub,
+framework for testing TestNG, driver for testing system Selenium, version control system GitHub,
 continuous Integration Server Jenkins, for documentation Google document and google spreadsheets,
 for diagrams MindMap, google diagrams, test management TestLink, Jira.
 
-![Java](src/images/java.png)
+![Java](src/images/java.png)       ![Gradle](src/images/Gradle.png)      ![Selenium](src/images/Selenium.png)      ![GitHub](src/images/GitHub.png)     ![Jenkins](src/images/Jenkins.png)      ![TestLink](src/images/TestLink.png)      ![Jira](src/images/Jira.png) 
+
+Testing will be based on test cases, including positive and negative scenarios.
+When we receive a new build of the application, we will start work with Smoke testing.
+State transition diagrams and Pairwise will be used as a software testing methodology.
+
+
 
 All test project describes [Test Plan](https://docs.google.com/document/d/1D5jcdyrv96tUdze5YWdlHociLneN7YNa/edit?usp=drive_link&ouid=109104427040351955730&rtpof=true&sd=true).
 

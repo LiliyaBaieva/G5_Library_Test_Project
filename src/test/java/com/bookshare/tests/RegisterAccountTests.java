@@ -4,10 +4,9 @@ import com.bookshare.fw.DataProviders;
 import com.bookshare.model.User;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-public class CreateAccountTests extends TestBase {
+public class RegisterAccountTests extends TestBase {
 
   @BeforeMethod
   public void ensurePrecondition(){
@@ -15,7 +14,7 @@ public class CreateAccountTests extends TestBase {
     if(app.getHeader().isLogOutButtonPresent()){
       app.getHeader().clickOnLogOutButton();
     }
-    app.getHeader().clickOnSignUpButton();
+    app.getHeader().clickOnSignUpLink();
   }
 
   @Test
@@ -37,7 +36,7 @@ public class CreateAccountTests extends TestBase {
   public void RegistrationUserFromCsvNegative(User user) {
     app.getUser().fillInRegistrationFormFromCsv(user);
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getUser().isModalWindowPresent());  //TODO get error message
+    Assert.assertTrue(app.getUser().isModalWindowPresent());
 //    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
   }
 
@@ -70,6 +69,29 @@ public class CreateAccountTests extends TestBase {
   }
 
 
+  @Test
+  public void registrationUserWithWrongEmailNegative1(){
+    app.getUser().fillInRegistrationForm("testLu.mail.com", "testLu@mail.com", "testLu@mail.com");
+    app.getUser().clickOnSignUpButton();
+//    Assert.assertTrue(validationMessageElement.isDisplayed());  //TODO get error message
+//    Assert.assertTrue(app.getUser().isPopUpWinIsPresent());
+    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
+  }
 
+  @Test
+  public void registrationUserWithWrongEmailNegative2(){
+    app.getUser().fillInRegistrationForm("testm@mailcom", "Qwerty$123", "Qwerty$123");
+    app.getUser().clickOnSignUpButton();
+//    Assert.assertTrue(validationMessageElement.isDisplayed());  //TODO get error message
+//    Assert.assertTrue(app.getUser().isPopUpWinIsPresent());
+    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
+  }
+
+  @Test
+  public void registerExistedUserNegativeTest(){
+    app.getUser().fillInRegistrationForm("anna@mail.com", "$Anna.2023$", "$Anna.2023$");
+    app.getUser().clickOnSignUpButton();
+    Assert.assertTrue(app.getUser().isModalWindowPresent());
+  }
 
 }

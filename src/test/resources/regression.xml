@@ -15,7 +15,7 @@
       <class name="com.bookshare.tests.AddBookTests"/>
       <class name="com.bookshare.tests.LeftSideMenuTests"/>
       <class name="com.bookshare.tests.UpdateBookTests"></class>
-<!--      <class name="com.bookshare.tests.SearchBookTests"/>-->
+      <class name="com.bookshare.tests.SearchBookTests"/>
     </classes>
   </test>
 

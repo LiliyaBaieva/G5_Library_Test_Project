@@ -1,6 +1,7 @@
 package com.bookshare.fw;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 
 public class BookHelper extends BaseHelper{
@@ -40,7 +41,7 @@ public class BookHelper extends BaseHelper{
   }
 
   public boolean isAddBookLinkPresent() {
-    return isElementPresent(By.cssSelector(" a.library-item-left__bottom.button.button-library"));
+    return isElementPresent(By.cssSelector("button.library-item-left__bottom.button.button-library"));
   }
 
   public void clickOnAddBookButton() {
@@ -57,7 +58,7 @@ public class BookHelper extends BaseHelper{
   }
 
   public void clickMoreInfoOfBookLink(int numOfBook) {
-    click(By.xpath("//div[" + numOfBook + "]/div[1]/div[1]/button[1]"));
+    click(By.xpath("//div[2]/div[" + numOfBook + "]/div[1]/div[1]/button[1]"));
   }
 
   public void clickOnGetBookButton() {
@@ -65,7 +66,9 @@ public class BookHelper extends BaseHelper{
   }
 
   public String getTitleOfBook(int numOfBook) {
+    pause(1000);
     clickMoreInfoOfBookLink(numOfBook);
+    pause(1000);
     return getText(By.cssSelector("p.book__title:nth-child(1)"));
   }
 
@@ -111,35 +114,46 @@ public class BookHelper extends BaseHelper{
     return driver.findElement(By.cssSelector(" p.book__genre:nth-child(4)")).getText();
   }
 
-  public void searchBookByTitle(String searchedTitle) {
+  public void searchBookByType(String searchedTitle) {
     //type on search
-    type(By.cssSelector(".form-search__input"), searchedTitle);
-
-    //click on search by title
-    click(By.xpath("")); //todo
-
-    // click search
-    click(By.xpath("")); //todo
+    type(By.cssSelector("[placeholder='Search by title, author']"), searchedTitle);
+    driver.findElement(By.cssSelector("[placeholder='Search by title, author']")).sendKeys(Keys.ENTER);
   }
 
 
   public String getAuthorOfBook(int numOfBook) {
+    pause(1000);
     clickMoreInfoOfBookLink(numOfBook);
-    return getText(By.cssSelector("")); //todo get text author
+    pause(1000);
+    return getText(By.cssSelector("p.book__title:nth-child(2)"));
   }
 
-  public void searchBookByAuthor(String searchedAuthor) {
-    //type on search
-    type(By.cssSelector(".form-search__input"), searchedAuthor);
-
-    //click on search by Author
-    click(By.xpath("")); //todo
-
-    // click search
-    click(By.xpath("")); //todo
-  }
 
   public void clickOnUpdateBookButton() {
     click(By.xpath("//button[.='Update Book']"));
+  }
+
+  public void searchBookByLanguage(String language) {
+    click(By.xpath("//button[1]/*[1]"));
+    click(By.xpath("//label[.='" + language + "']/input"));
+  }
+
+  public String getLanguageOfFirstBook(int numOfBook) {
+    pause(1000);
+    clickMoreInfoOfBookLink(numOfBook);
+    pause(1000);
+    return getText(By.cssSelector("p.book__genre:nth-child(4)"));
+  }
+
+  public void searchBookByLocation(String city) {
+    click(By.xpath("//button[1]/*[1]"));
+    click(By.xpath("//label[.='" + city + "']/input"));
+  }
+
+  public String getCityOfBook(int numOfBook) {
+    pause(1000);
+    clickMoreInfoOfBookLink(numOfBook);
+    pause(1000);
+    return getText(By.xpath("//div[2]/p[8]"));
   }
 }

@@ -94,6 +94,10 @@ public class UserHelper extends BaseHelper {
     return isElementPresent(By.xpath("//button[.='Log In']"));
   }
 
+  public boolean isLoginButtonNotPresent() {
+    return !isElementPresent(By.xpath("//button[.='Log In']"));
+  }
+
   public String firstnameGetText() {
     return getTextByValue(By.cssSelector("[name='firstName']"));
   }
@@ -112,9 +116,15 @@ public class UserHelper extends BaseHelper {
   }
 
   public boolean isModalWindowPresent() {
-    Boolean result = isElementPresent(By.xpath(""));
-    return false;
+    Boolean isWindowExist = isElementPresent(By.cssSelector(".modal-content"));
+    click(By.xpath("//button[.='Close']"));
+    return isWindowExist;
   }
+
+
+//  public boolean isTooltipPresent() {
+//    return isTooltipVisible(By.cssSelector("[name='email']"));
+//  }
 }
 
 

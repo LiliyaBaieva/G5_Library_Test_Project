@@ -25,7 +25,7 @@ public class HeaderHelper extends BaseHelper {
     click(By.xpath("//a[.='Login']"));
   }
 
-  public void clickOnSignUpButton() {
+  public void clickOnSignUpLink() {
     click(By.xpath("//a[.='Sign Up']"));
   }
 
@@ -111,5 +111,8 @@ public class HeaderHelper extends BaseHelper {
     return verifyLinks("http://localhost:3000/login");
   }
 
+  public void clickOnLogo() {
+    click(By.cssSelector("[alt='logo']"));
+  }
 }
 

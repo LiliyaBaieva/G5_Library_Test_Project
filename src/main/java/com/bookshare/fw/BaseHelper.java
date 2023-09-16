@@ -6,6 +6,10 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+import javax.swing.Popup;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -132,6 +136,43 @@ public class BaseHelper {
 
   public String getText(By locator) {
     return driver.findElement(locator).getText();
+  }
+
+  public boolean isTooltipVisible(By locator){
+    String tooltip = driver.findElement(locator).getAttribute("title");
+
+    if(tooltip.contains("@")){
+      System.out.println("************************ [ " + tooltip + " ]");
+      return true;
+    } else {
+      System.out.println("********** No TOOLTIP");
+    }
+
+    return false;
+  }
+
+
+  public boolean isPopUpWinIsPresent(){
+
+//    Set<String> set =  driver.getWindowHandles();
+    List<String> list = new ArrayList<>(driver.getWindowHandles());
+
+// store your main window handle in variable
+    String mainWindow = list.get(0);
+
+    String titlePopUp = driver.switchTo().window(list.get(1)).getTitle();
+    if(!titlePopUp.isEmpty()){
+      driver.switchTo().window(mainWindow);
+      return true;
+    }
+    pause(2000);
+    driver.switchTo().window(list.get(1));
+
+//    if(list.size() >= 2){
+//      return true;
+//    }
+
+    return false;
   }
 
 }
