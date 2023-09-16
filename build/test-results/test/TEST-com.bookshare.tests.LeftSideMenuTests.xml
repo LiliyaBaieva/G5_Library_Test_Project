@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.LeftSideMenuTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-16T18:26:33" hostname="LAPTOP-LILIIA" time="0.398">
+  <properties/>
+  <testcase name="allButtonInLeftSideMenuIsPresent" classname="com.bookshare.tests.LeftSideMenuTests" time="0.398"/>
+  <system-out><![CDATA[21:26:32.137 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test allButtonInLeftSideMenuIsPresent with data: []
+21:26:33.567 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: allButtonInLeftSideMenuIsPresent
+21:26:33.567 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+21:26:33.567 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

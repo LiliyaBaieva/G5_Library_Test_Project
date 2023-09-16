@@ -5,7 +5,7 @@
 /build/resources/
 /build/tmp/
 
-build/test-results/
+
 
 # Ignore Gradle GUI config
 gradle-app.setting

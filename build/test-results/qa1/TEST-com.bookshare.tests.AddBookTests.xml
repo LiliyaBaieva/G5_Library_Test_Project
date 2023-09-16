@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.AddBookTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-10T10:55:38" hostname="LAPTOP-LILIIA" time="1.232">
+  <properties/>
+  <testcase name="cancelAddNewBookTest" classname="com.bookshare.tests.AddBookTests" time="1.232"/>
+  <system-out><![CDATA[13:55:37.901 [Test worker] INFO  com.bookshare.tests.TestBase -- Start test cancelAddNewBookTest with data: []
+13:55:39.741 [Test worker] INFO  com.bookshare.tests.TestBase -- PASSED: cancelAddNewBookTest
+13:55:39.742 [Test worker] INFO  com.bookshare.tests.TestBase -- Stop test
+13:55:39.743 [Test worker] INFO  com.bookshare.tests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
