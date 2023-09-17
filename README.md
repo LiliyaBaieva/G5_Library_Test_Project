@@ -11,7 +11,7 @@ The test project is developed according to the [application requirements](https:
 and [functional requirements](https://app.diagrams.net/#G1CrpUxmWZwFm6MBLW17g9Vtl-ajKilM_-) that created schematically in the form of page layouts.
 
 According to the requirements, a map of the main functionality for testing was created.
-![main functionality for testing](src/images/BookShare_main_function.png)
+![main functionality for testing](images/BookShare_main_function.png)
 
 The programs, tools and frameworks for testing what were used in project:
 development environment IntelliJ IDEA, programming language Java, build system Gradle, 
@@ -19,7 +19,7 @@ framework for testing TestNG, driver for testing system Selenium, version contro
 continuous Integration Server Jenkins, for documentation Google document and google spreadsheets,
 for diagrams MindMap, google diagrams, test management TestLink, Jira.
 
-![Java](src/images/java.png)       ![Gradle](src/images/Gradle.png)      ![Selenium](src/images/Selenium.png)      ![GitHub](src/images/GitHub.png)     ![Jenkins](src/images/Jenkins.png)      ![TestLink](src/images/TestLink.png)      ![Jira](src/images/Jira.png) 
+![Java](images/java.png)       ![Gradle](images/Gradle.png)      ![Selenium](images/Selenium.png)      ![GitHub](images/GitHub.png)     ![Jenkins](images/Jenkins.png)      ![TestLink](images/TestLink.png)      ![Jira](images/Jira.png) 
 
 Testing will be based on test cases, including positive and negative scenarios.
 When we receive a new build of the application, we will start work with Smoke testing.
