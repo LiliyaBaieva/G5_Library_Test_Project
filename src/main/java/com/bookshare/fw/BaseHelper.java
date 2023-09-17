@@ -8,6 +8,7 @@ import java.net.URL;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 import javax.swing.Popup;
 import org.openqa.selenium.Alert;
@@ -173,6 +174,11 @@ public class BaseHelper {
 //    }
 
     return false;
+  }
+
+  public Integer randomInt(){
+    Random random = new Random();
+    return random.nextInt(100);
   }
 
 }

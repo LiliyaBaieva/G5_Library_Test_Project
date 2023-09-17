@@ -1,4 +1,4 @@
-package com.bookshare.tests;
+package com.bookshare.tests.UITests;
 
 import com.bookshare.fw.ApplicationManager;
 import java.lang.reflect.Method;

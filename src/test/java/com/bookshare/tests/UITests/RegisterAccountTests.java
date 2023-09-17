@@ -1,4 +1,4 @@
-package com.bookshare.tests;
+package com.bookshare.tests.UITests;
 
 import com.bookshare.fw.DataProviders;
 import com.bookshare.model.User;
@@ -10,7 +10,6 @@ public class RegisterAccountTests extends TestBase {
 
   @BeforeMethod
   public void ensurePrecondition(){
-//    if(!app.getHeader().isLoginLinkPresent()){
     if(app.getHeader().isLogOutButtonPresent()){
       app.getHeader().clickOnLogOutButton();
     }
@@ -18,18 +17,13 @@ public class RegisterAccountTests extends TestBase {
   }
 
   @Test
-  public void registrationUserNegative(){
-    app.getUser().fillInRegistrationForm("testLu.mail.com", "testLu@mail.com", "testLu@mail.com");
+  public void RegistrationUserPositiveTest(){
+    app.getUser().fillInRegistrationForm(
+        "test" + app.getUser().randomInt() + "@mail.com",
+        "Test%555",
+        "Test%555");
     app.getUser().clickOnSignUpButton();
-//    Assert.assertTrue(validationMessageElement.isDisplayed());  //TODO get error message
-    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
-  }
-
-  @Test(dataProviderClass = DataProviders.class, dataProvider = "addUserFromCsvFile")
-  public void RegistrationUserFromCsvPositive(User user){
-    app.getUser().fillInRegistrationFormFromCsv(user);
-    app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getHeader().isLoginLinkPresent());
+    Assert.assertTrue(app.getUser().isLoginButtonPresent());
   }
 
   @Test(dataProviderClass = DataProviders.class, dataProvider = "addUserFromCsvFileNegative")
@@ -92,6 +86,14 @@ public class RegisterAccountTests extends TestBase {
     app.getUser().fillInRegistrationForm("anna@mail.com", "$Anna.2023$", "$Anna.2023$");
     app.getUser().clickOnSignUpButton();
     Assert.assertTrue(app.getUser().isModalWindowPresent());
+  }
+
+  @Test
+  public void registrationUserNegative(){
+    app.getUser().fillInRegistrationForm("testLu.mail.com", "testLu@mail.com", "testLu@mail.com");
+    app.getUser().clickOnSignUpButton();
+//    Assert.assertTrue(validationMessageElement.isDisplayed());  //TODO get error message
+    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
   }
 
 }
