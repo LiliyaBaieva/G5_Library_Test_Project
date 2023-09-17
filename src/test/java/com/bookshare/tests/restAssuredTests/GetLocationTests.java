@@ -3,6 +3,7 @@ package com.bookshare.tests.restAssuredTests;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
+import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 public class GetLocationTests extends TestBaseApi{
@@ -15,7 +16,9 @@ public class GetLocationTests extends TestBaseApi{
 
   @Test
   public void getlocationCityTest(){
-    given().when().get("/api/location/13599").then()
+    given()
+        .contentType(ContentType.JSON)
+        .when().get("/api/location/13599").then()
         .assertThat().statusCode(200)
         .body("city", equalTo("Berlin"));
   }
