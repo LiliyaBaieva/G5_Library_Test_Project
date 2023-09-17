@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.UITests.RegisterAccountTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-17T15:33:43" hostname="LAPTOP-LILIIA" time="1.853">
+  <properties/>
+  <testcase name="RegistrationUserPositiveTest" classname="com.bookshare.tests.UITests.RegisterAccountTests" time="1.853"/>
+  <system-out><![CDATA[18:33:32.761 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test RegistrationUserPositiveTest with data: []
+18:33:44.883 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: RegistrationUserPositiveTest
+18:33:44.883 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+18:33:44.883 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

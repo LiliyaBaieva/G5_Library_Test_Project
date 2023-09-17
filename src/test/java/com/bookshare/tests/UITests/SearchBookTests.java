@@ -1,4 +1,4 @@
-package com.bookshare.tests;
+package com.bookshare.tests.UITests;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

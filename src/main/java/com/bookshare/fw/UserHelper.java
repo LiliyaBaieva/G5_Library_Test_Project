@@ -1,6 +1,7 @@
 package com.bookshare.fw;
 
 import com.bookshare.model.User;
+import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -121,10 +122,21 @@ public class UserHelper extends BaseHelper {
     return isWindowExist;
   }
 
-
-//  public boolean isTooltipPresent() {
-//    return isTooltipVisible(By.cssSelector("[name='email']"));
-//  }
+  public static String randomPostalCode() {
+    String postalCode;
+    Random random = new Random();
+    int randomInt = random.nextInt(6);
+    switch (randomInt) {
+      case 1 -> postalCode = "13599";
+      case 2 -> postalCode = "01109";
+      case 3 -> postalCode = "01067";
+      case 4 -> postalCode = "55743";
+      case 5 -> postalCode = "60308";
+      case 6 -> postalCode = "10111";
+      default -> postalCode = "10115";
+    }
+    return postalCode;
+  }
 }
 
 

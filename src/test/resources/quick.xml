@@ -4,15 +4,15 @@
 
   <test name="Smoke" >
     <classes>
-      <class name="com.bookshare.tests.LoginTests">
+      <class name="com.bookshare.tests.UITests.LoginTests">
         <methods>
           <exclude name=".*Negative.*"></exclude>
         </methods>
       </class>
-      <class name="com.bookshare.tests.LogOutTests" />
-      <class name="com.bookshare.tests.HeaderTests" />
-      <class name="com.bookshare.tests.FooterTests" />
-      <class name="com.bookshare.tests.LeftSideMenuTests"/>
+      <class name="com.bookshare.tests.UITests.LogOutTests" />
+      <class name="com.bookshare.tests.UITests.HeaderTests" />
+      <class name="com.bookshare.tests.UITests.FooterTests" />
+      <class name="com.bookshare.tests.UITests.LeftSideMenuTests"/>
     </classes>
   </test>
 
