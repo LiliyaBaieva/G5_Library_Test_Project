@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.restAssuredTests.GetCategoriesTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-17T16:29:06" hostname="LAPTOP-LILIIA" time="1.194">
+  <properties/>
+  <testcase name="getCategoriesTest" classname="com.bookshare.tests.restAssuredTests.GetCategoriesTests" time="1.194"/>
+  <system-out><![CDATA[19:29:06.640 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Start test getCategoriesTest with parametrs: []
+19:29:07.842 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Stop test
+19:29:07.843 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- ========================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
