@@ -27,5 +27,17 @@ State transition diagrams and Pairwise will be used as a software testing method
 
 
 
-All test project describes [Test Plan](https://docs.google.com/document/d/1D5jcdyrv96tUdze5YWdlHociLneN7YNa/edit?usp=drive_link&ouid=109104427040351955730&rtpof=true&sd=true).
+- All test project describes [Test Plan](https://docs.google.com/document/d/1D5jcdyrv96tUdze5YWdlHociLneN7YNa/edit?usp=drive_link&ouid=109104427040351955730&rtpof=true&sd=true).
 
+- [Repository with Backend](https://github.com/melondina/bookSwap_backend) 
+Developers use Java, Spring Boot,Lombok and database PostgresSQL.
+
+- [Repository with Frontend](https://github.com/melondina/bookswap_frontend)
+  This project was bootstrapped with Create React App used JavaScript and TypeScript.
+
+<!--
+//скриншот тестов с тест линка
+//скриншот тестов с дженкинса рест апи, смоки и регрессионого.
+//Прикрепить баг репорты
+//Написать репорт по тестам
+-->

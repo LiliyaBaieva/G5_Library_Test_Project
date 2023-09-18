@@ -19,5 +19,4 @@ public class GetCategoriesTests extends TestBaseApi{
         .assertThat().statusCode(200);
   }
 
-
 }

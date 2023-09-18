@@ -18,7 +18,7 @@ public class RARegistrationUserTests extends TestBaseApi{
         .confirmPassword("Qwerty$333")
         .build();
 
-    AuthResponseDto response = given()
+    given()
         .contentType(ContentType.JSON)
         .body(user)
         .when()
@@ -26,9 +26,25 @@ public class RARegistrationUserTests extends TestBaseApi{
         .then()
         .assertThat().statusCode(201)
         .extract().response().as(AuthResponseDto.class);
-
-    System.out.println(response);
-
   }
+
+  @Test
+  public void registerWithWrongEmailUserNegativeTest(){
+
+    RegistrationUserDto user = RegistrationUserDto.builder()
+        .email("jon.mail.com")
+        .password("Qwerty$333")
+        .confirmPassword("Qwerty$333")
+        .build();
+
+    given()
+        .contentType(ContentType.JSON)
+        .body(user)
+        .when()
+        .post("/api/registration")
+        .then()
+        .assertThat().statusCode(400);
+  }
+
 
 }
