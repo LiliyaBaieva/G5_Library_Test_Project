@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bookshare.tests.restAssuredTests.UpdateBookTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-18T14:28:42" hostname="LAPTOP-LILIIA" time="0.947">
+<testsuite name="com.bookshare.tests.restAssuredTests.UpdateBookTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-18T14:37:38" hostname="LAPTOP-LILIIA" time="0.304">
   <properties/>
-  <testcase name="updateBookPositiveTests" classname="com.bookshare.tests.restAssuredTests.UpdateBookTests" time="0.947"/>
-  <system-out><![CDATA[17:28:40.840 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Start test updateBookPositiveTests with parametrs: []
-title: Test Book update
-pages: 20
-17:28:43.023 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Stop test
-17:28:43.024 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- ========================
+  <testcase name="updateNotExistedBookNegativeTests" classname="com.bookshare.tests.restAssuredTests.UpdateBookTests" time="0.304"/>
+  <system-out><![CDATA[17:37:36.982 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Start test updateNotExistedBookNegativeTests with parametrs: []
+17:37:39.087 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Stop test
+17:37:39.092 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- ========================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
