@@ -12,15 +12,14 @@ import org.testng.annotations.Test;
 
 public class AddBookTests extends TestBaseApi {
 
+  public Integer bookId;
   private Cookie cookieValidUser;
   private Cookie cookieUserWithoutData;
-  private Cookie cookieUserWithWrongEmail;
 
   @BeforeMethod
   public void precondition() {
      cookieValidUser = loginWithUser("anna@mail.com", "$Anna.2023$");
      cookieUserWithoutData = loginWithUser("mark@mail.com", "Qwerty$111");
-     cookieUserWithWrongEmail = loginWithUser("anna.mail.com", "$Anna.2023$");
   }
 
   @Test
@@ -64,7 +63,7 @@ public class AddBookTests extends TestBaseApi {
         .owner(10)
         .build();
 
-given()
+    given()
        .contentType(ContentType.JSON)
        .body(newBook)
        .when()
