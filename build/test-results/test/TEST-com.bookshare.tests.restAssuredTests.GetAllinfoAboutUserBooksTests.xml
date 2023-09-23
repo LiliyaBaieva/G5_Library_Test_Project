@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.restAssuredTests.GetAllinfoAboutUserBooksTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-09-23T18:25:09" hostname="LAPTOP-LILIIA" time="0.233">
+  <properties/>
+  <testcase name="GetAllinfoAboutAnotherUserBooksNegativeTest" classname="com.bookshare.tests.restAssuredTests.GetAllinfoAboutUserBooksTests" time="0.233"/>
+  <system-out><![CDATA[21:25:08.500 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Start test GetAllinfoAboutAnotherUserBooksNegativeTest with parametrs: []
+21:25:10.081 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- Stop test
+21:25:10.081 [Test worker] INFO  c.b.t.restAssuredTests.TestBaseApi -- ========================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
