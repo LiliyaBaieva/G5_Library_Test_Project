@@ -4,7 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 import com.bookshare.dto.AddBookDto;
-import com.bookshare.dto.UpdatedBookDto;
+import com.bookshare.dto.BookDto;
 import io.restassured.http.ContentType;
 import io.restassured.http.Cookie;
 import org.testng.annotations.BeforeMethod;
@@ -38,7 +38,7 @@ public class UpdateBookTests extends TestBaseApi {
         .owner(10)
         .build();
 
-    UpdatedBookDto updatedBookData = given()
+    BookDto updatedBookData = given()
         .cookie(cookie)
         .contentType(ContentType.JSON)
         .body(updatedBook)
@@ -48,7 +48,7 @@ public class UpdateBookTests extends TestBaseApi {
         .assertThat().statusCode(200)
         .assertThat().body("title", equalTo("Test Book update"))
         .assertThat().body("pages", equalTo(nuOfPages + ""))
-        .extract().body().as(UpdatedBookDto.class);
+        .extract().body().as(BookDto.class);
     String title = updatedBookData.getTitle();
     Integer pages = updatedBookData.getPages();
     System.out.println("title: " + title);

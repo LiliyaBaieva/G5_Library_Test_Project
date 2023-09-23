@@ -13,7 +13,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @Builder
-public class UpdatedBookDto {
+public class BookDto {
   private Integer bookId;
   private String title;
   private String author;
