@@ -71,4 +71,22 @@ public class TestBaseApi {
     return random.nextInt(100);
   }
 
+  public void addBookToUsersListOfBooks(Cookie cookie, int bookId, int userId) {
+    given()
+        .cookie(cookie)
+        .contentType(ContentType.JSON)
+        .body("{\"bookId\": " + bookId + ", \"userId\": " + userId + "}")
+        .when()
+        .post("/api/books/getting");
+  }
+
+  public void removeBookFromUserBooksList(Cookie cookie, int bookId, int userId) {
+    given()
+        .contentType(ContentType.JSON)
+        .cookie(cookie)
+        .body("{\"bookId\": " + bookId + ", \"userId\": " + userId + "}")
+        .when()
+        .delete("/api/books/remove");
+  }
+
 }
