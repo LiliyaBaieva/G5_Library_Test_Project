@@ -42,7 +42,7 @@ public class GetListOfBookToReadTests extends TestBaseApi{
 
   // Want to get a list of Book another user also 403
   @Test
-  public void getListOfBookToReadUserWithoutAutorizationNegativeTest(){
+  public void getListOfBookToReadUserWithoutAuthorizationNegativeTest(){
     given()
         .contentType(ContentType.JSON)
 //        .cookie(cookieAnna)
