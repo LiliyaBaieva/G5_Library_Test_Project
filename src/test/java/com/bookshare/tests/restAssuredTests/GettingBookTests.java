@@ -29,6 +29,8 @@ public class GettingBookTests extends TestBaseApi{
         .post("/api/books/getting")
         .then()
         .assertThat().statusCode(200);
+
+    removeBookFromUserBooksList(cookieAnna, 2, 10);
   }
 
   @Test
