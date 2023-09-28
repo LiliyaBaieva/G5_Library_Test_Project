@@ -19,9 +19,9 @@ public class BookPageTests extends TestBase{
     app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
     String title = app.getBook().getTitleOfBook(8);
     System.out.println("*********************" + title);
-//    app.getBook().clickOnGetBookButton();
+    app.getBook().clickOnGetBookButton();
 //    System.out.println(title);
-//    Assert.assertTrue(app.getBook().isBookWithTitleInWaitingBookPresent(title));
+    Assert.assertTrue(app.getBook().isBookWithTitleInWaitingBookPresent(title));
   }
 
 

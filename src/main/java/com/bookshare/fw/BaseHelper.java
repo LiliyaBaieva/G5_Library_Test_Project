@@ -152,35 +152,18 @@ public class BaseHelper {
     return false;
   }
 
-
-  public boolean isPopUpWinIsPresent(){
-
-//    Set<String> set =  driver.getWindowHandles();
-    List<String> list = new ArrayList<>(driver.getWindowHandles());
-
-// store your main window handle in variable
-    String mainWindow = list.get(0);
-
-    String titlePopUp = driver.switchTo().window(list.get(1)).getTitle();
-    if(!titlePopUp.isEmpty()){
-      driver.switchTo().window(mainWindow);
-      return true;
-    }
-    pause(2000);
-    driver.switchTo().window(list.get(1));
-
-//    if(list.size() >= 2){
-//      return true;
-//    }
-
-    return false;
-  }
-
   public Integer randomInt(){
     Random random = new Random();
     return random.nextInt(100);
   }
 
+  public void clickOnCloseErrorWindowButton() {
+    click(By.xpath("//button[.='Close']"));
+  }
+
+  public boolean isErrorWindowPresent() {
+    return isElementPresent(By.cssSelector(".error-message"));
+  }
 }
 
 

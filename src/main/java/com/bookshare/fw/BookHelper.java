@@ -74,8 +74,12 @@ public class BookHelper extends BaseHelper{
 
 
   public boolean isBookWithTitleInWaitingBookPresent(String title) {
-    click(By.xpath("//button[.='My waiting books']"));
+    clickOnWantToReadButton();
     return isElementPresent(By.xpath("//*[.='" + title + "']"));
+  }
+
+  public void clickOnWantToReadButton() {
+    click(By.xpath("//button[.='Want to read']"));
   }
 
   public boolean myBookButtonIsPresent() {
@@ -156,4 +160,17 @@ public class BookHelper extends BaseHelper{
     pause(1000);
     return getText(By.xpath("//div[2]/p[8]"));
   }
+
+  public void deleteBookFromWantToRead(String title) {
+    clickOnWantToReadButton();
+    // isElementPresent(By.xpath("//*[.='" + title + "']"));
+    clickMoreInfoOfBookLinkByTitle(title);
+    click(By.xpath("//button[.='Delete']"));
+  }
+
+  public boolean isErrorWindowDisplayed() {
+    return isElementPresent(By.cssSelector("p.error-message"));
+  }
+
+
 }
