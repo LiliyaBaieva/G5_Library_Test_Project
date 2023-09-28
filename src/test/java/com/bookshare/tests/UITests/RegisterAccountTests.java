@@ -11,7 +11,7 @@ public class RegisterAccountTests extends TestBase {
   @BeforeMethod
   public void ensurePrecondition(){
     if(app.getHeader().isLogOutButtonPresent()){
-      app.getHeader().clickOnLogOutButton();
+      app.getUser().logOutUser();
     }
     app.getHeader().clickOnSignUpLink();
   }
@@ -30,7 +30,8 @@ public class RegisterAccountTests extends TestBase {
   public void RegistrationUserFromCsvNegative(User user) {
     app.getUser().fillInRegistrationFormFromCsv(user);
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getUser().isModalWindowPresent());
+    Assert.assertTrue(app.getUser().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
 //    Assert.assertTrue(app.getUser().isSignUpButtonPresent());
   }
 
@@ -38,28 +39,32 @@ public class RegisterAccountTests extends TestBase {
   public void RegistrationUserWithoutCheckBoxNegative(){
     app.getUser().fillInRegistrationFormWithoutCheckBox("test@mail.com", "Test%555", "Test%555");
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getHeader().isAlertPresent());
+    Assert.assertTrue(app.getHeader().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
   }
 
   @Test
   public void RegistrationUserWithoutEmailNegative(){
     app.getUser().fillInRegistrationForm(null, "Test%555", "Test%555");
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getHeader().isAlertPresent());
+    Assert.assertTrue(app.getHeader().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
   }
 
   @Test
   public void RegistrationUserWithoutPasswordNegative(){
     app.getUser().fillInRegistrationForm( "test@mail.com", null, "Test%555");
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getHeader().isAlertPresent());
+    Assert.assertTrue(app.getHeader().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
   }
 
   @Test
   public void RegistrationUserWithoutConfirmPasswordNegative(){
     app.getUser().fillInRegistrationForm( "test@mail.com",  "Test%555", null);
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getHeader().isAlertPresent());
+    Assert.assertTrue(app.getHeader().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
   }
 
 
@@ -76,7 +81,7 @@ public class RegisterAccountTests extends TestBase {
   public void registrationUserWithWrongEmailNegative2(){
     app.getUser().fillInRegistrationForm("testm@mailcom", "Qwerty$123", "Qwerty$123");
     app.getUser().clickOnSignUpButton();
-//    Assert.assertTrue(validationMessageElement.isDisplayed());  //TODO get error message
+//    Assert.assertTrue(validationMessageElement.isDisplayed());
 //    Assert.assertTrue(app.getUser().isPopUpWinIsPresent());
     Assert.assertTrue(app.getUser().isSignUpButtonPresent());
   }
@@ -85,7 +90,8 @@ public class RegisterAccountTests extends TestBase {
   public void registerExistedUserNegativeTest(){
     app.getUser().fillInRegistrationForm("anna@mail.com", "$Anna.2023$", "$Anna.2023$");
     app.getUser().clickOnSignUpButton();
-    Assert.assertTrue(app.getUser().isModalWindowPresent());
+    Assert.assertTrue(app.getUser().isErrorWindowPresent());
+    app.getUser().clickOnCloseErrorWindowButton();
   }
 
   @Test
