@@ -35,9 +35,11 @@ Developers use Java, Spring Boot,Lombok and database PostgresSQL.
 - [Repository with Frontend](https://github.com/melondina/bookswap_frontend)
   This project was bootstrapped with Create React App used JavaScript and TypeScript.
 
+- All bug reports was added in (Jira)[https://drive.google.com/drive/folders/1ofeoaW9_trovnZC_CzGjSVgSkK-87KxD?usp=drive_link]
+
+
 <!--
 //скриншот тестов с тест линка
 //скриншот тестов с дженкинса рест апи, смоки и регрессионого.
-//Прикрепить баг репорты
 //Написать репорт по тестам
 -->

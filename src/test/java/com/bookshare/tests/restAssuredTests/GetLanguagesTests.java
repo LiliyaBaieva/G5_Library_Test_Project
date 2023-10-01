@@ -1,4 +1,4 @@
-package com.bookshare.tests.UITests;
+package com.bookshare.tests.restAssuredTests;
 
 import static io.restassured.RestAssured.given;
 

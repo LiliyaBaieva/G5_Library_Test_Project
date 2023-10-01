@@ -16,6 +16,11 @@
       <class name="com.bookshare.tests.UITests.LeftSideMenuTests"/>
       <class name="com.bookshare.tests.UITests.UpdateBookTests"></class>
       <class name="com.bookshare.tests.UITests.SearchBookTests"/>
+      <class name="com.bookshare.tests.UITests.GetBookTests"/>
+      <class name="com.bookshare.tests.UITests.DeleteBookFromWantToReadTests"/>
+      <class name="com.bookshare.tests.UITests.LoginTests"/>
+      <class name="com.bookshare.tests.UITests.MyProfileTests"/>
+      <class name="com.bookshare.tests.UITests.RegisterAccountTests"/>
     </classes>
   </test>
 

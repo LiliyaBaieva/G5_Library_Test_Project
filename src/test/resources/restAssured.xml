@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Regression" verbose="1" >
+
+  <test name="RestAssured" >
+    <classes>
+      <class name="com.bookshare.tests.restAssuredTests.AddBookTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetAllinfoAboutUserBooksTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetBookTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetCategoriesTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetLanguagesTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetListForFiltersTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetListOfBookToReadTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetListOfWaitingBooksTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetLocationTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GetShotListOfBooksTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.GettingBookTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.RAGetUserProfileTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.RALoginTest"/>
+      <class name="com.bookshare.tests.restAssuredTests.RALogOut"/>
+      <class name="com.bookshare.tests.restAssuredTests.RARegistrationUserTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.RemoveBookFromUserBooksListTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.UpdateBookTests"/>
+      <class name="com.bookshare.tests.restAssuredTests.UpdateUserTests"/>
+    </classes>
+  </test>
+
+</suite>
