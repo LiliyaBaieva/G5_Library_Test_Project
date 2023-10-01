@@ -18,9 +18,7 @@ public class UpdateBookTests extends TestBase{
     app.getHeader().clickOnMyLibraryLink();
     app.getBook().clickOnAddNewBookLink();
     app.getBook().fillInNewBookForm(
-        "https://www.britishbook.ua/upload/resize_cache/iblock/e2f/"
-            + "i5c2c1rn9ic5m4mzpewo3b16rg0m1b87/348_557_174b5ed2089e1946312e2a80dcd26f146"
-            + "/kniga_pinocchio.jpg",
+        "https://www.britishbook.ua/upload/resize_cache/iblock/c5f/wvt7nw0pa9as9cvdwx8d1h658a14ade9/317_448_174b5ed2089e1946312e2a80dcd26f146/kniga_usborne_english_readers_level_2_pinocchio.jpg",
         "Pinocchio",
         "Carlo Collodi",
         "Fairy tales",

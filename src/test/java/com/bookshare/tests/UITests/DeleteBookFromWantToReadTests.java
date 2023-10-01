@@ -10,7 +10,7 @@ public class DeleteBookFromWantToReadTests extends TestBase{
   @BeforeMethod
   public void ensurePrecondition(){
     if(app.getHeader().isLogOutButtonPresent()) {
-      app.getHeader().clickOnLogOutButton();
+      app.getUser().logOutUser();
     }
       app.getHeader().clickOnLoginLink();
       app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
