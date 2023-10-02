@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bookshare.tests.UITests.LeftSideMenuTests" tests="2" skipped="1" failures="1" errors="0" timestamp="2023-10-02T13:57:36" hostname="LAPTOP-LILIIA" time="0.012">
+<testsuite name="com.bookshare.tests.UITests.UpdateBookTests" tests="2" skipped="1" failures="1" errors="0" timestamp="2023-10-02T14:47:01" hostname="LAPTOP-LILIIA" time="11.148">
   <properties/>
-  <testcase name="ensurePrecondition" classname="com.bookshare.tests.UITests.LeftSideMenuTests" time="0.011">
-    <failure message="org.openqa.selenium.NoSuchWindowException: no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: MicrosoftEdge=117.0.2045.47)&#10;Build info: version: '4.9.1', revision: 'eb2032df7f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'&#10;Driver info: org.openqa.selenium.edge.EdgeDriver&#10;Command: [0459b7e8a16c55f74068cd20820c2137, findElement {using=xpath, value=//a[.='Login']}]&#10;Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 117.0.2045.47, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56117}, msedge: {msedgedriverVersion: 117.0.2045.47 (b75fe6866687..., userDataDir: C:\Users\Lilu\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56117/devtoo..., se:cdpVersion: 117.0.2045.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 0459b7e8a16c55f74068cd20820c2137" type="org.openqa.selenium.NoSuchWindowException">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=117.0.2045.47)
+  <testcase name="ensurePrecondition" classname="com.bookshare.tests.UITests.UpdateBookTests" time="11.148">
+    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;links&quot; href=&quot;/library&quot;&gt;...&lt;/a&gt; is not clickable at point (961, 10). Other element would receive the click: &lt;iframe id=&quot;webpack-dev-server-client-overlay&quot; src=&quot;about:blank&quot; style=&quot;position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=117.0.5938.132)&#10;Build info: version: '4.9.1', revision: 'eb2032df7f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3a49c724d5f5f48b1ffdd32b66168bdb, clickElement {id=BCED42861F0555134F6E37E1EBDCC06E_element_10}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\Lilu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60824/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (3a49c724d5f5f48b1ffdd32b66168bdb)] -&gt; xpath: //a[.='My library']]&#10;Session ID: 3a49c724d5f5f48b1ffdd32b66168bdb" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;a class=&quot;links&quot; href=&quot;/library&quot;&gt;...&lt;/a&gt; is not clickable at point (961, 10). Other element would receive the click: &lt;iframe id=&quot;webpack-dev-server-client-overlay&quot; src=&quot;about:blank&quot; style=&quot;position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;&quot;&gt;&lt;/iframe&gt;
+  (Session info: chrome=117.0.5938.132)
 Build info: version: '4.9.1', revision: 'eb2032df7f'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [0459b7e8a16c55f74068cd20820c2137, findElement {using=xpath, value=//a[.='Login']}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 117.0.2045.47, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:56117}, msedge: {msedgedriverVersion: 117.0.2045.47 (b75fe6866687..., userDataDir: C:\Users\Lilu\AppData\Local...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56117/devtoo..., se:cdpVersion: 117.0.2045.47, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 0459b7e8a16c55f74068cd20820c2137
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a49c724d5f5f48b1ffdd32b66168bdb, clickElement {id=BCED42861F0555134F6E37E1EBDCC06E_element_10}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\Lilu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60824/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (3a49c724d5f5f48b1ffdd32b66168bdb)] -&gt; xpath: //a[.='My library']]
+Session ID: 3a49c724d5f5f48b1ffdd32b66168bdb
 	at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 	at java.base@17.0.7/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -23,13 +23,11 @@ Session ID: 0459b7e8a16c55f74068cd20820c2137
 	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
 	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
 	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at app//org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-	at app//org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:352)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:344)
-	at app//com.bookshare.fw.BaseHelper.isElementPresent(BaseHelper.java:33)
-	at app//com.bookshare.fw.HeaderHelper.isLoginLinkPresent(HeaderHelper.java:17)
-	at app//com.bookshare.tests.UITests.LeftSideMenuTests.ensurePrecondition(LeftSideMenuTests.java:11)
+	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
+	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
+	at app//com.bookshare.fw.BaseHelper.click(BaseHelper.java:41)
+	at app//com.bookshare.fw.HeaderHelper.clickOnMyLibraryLink(HeaderHelper.java:81)
+	at app//com.bookshare.tests.UITests.UpdateBookTests.ensurePrecondition(UpdateBookTests.java:18)
 	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -82,10 +80,10 @@ Session ID: 0459b7e8a16c55f74068cd20820c2137
 	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="allButtonInLeftSideMenuIsPresent" classname="com.bookshare.tests.UITests.LeftSideMenuTests" time="0.0">
+  <testcase name="updateBookTest" classname="com.bookshare.tests.UITests.UpdateBookTests" time="0.0">
     <skipped/>
   </testcase>
-  <system-out><![CDATA[16:57:36.827 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test allButtonInLeftSideMenuIsPresent with data: []
+  <system-out><![CDATA[17:47:01.148 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test updateBookTest with data: []
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

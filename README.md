@@ -29,27 +29,20 @@ State transition diagrams and Pairwise will be used as a software testing method
 
 - All test project describes [Test Plan](https://docs.google.com/document/d/1D5jcdyrv96tUdze5YWdlHociLneN7YNa/edit?usp=drive_link&ouid=109104427040351955730&rtpof=true&sd=true).
 
+
 - [Repository with Backend](https://github.com/melondina/bookSwap_backend) 
 Developers use Java, Spring Boot,Lombok and database PostgresSQL.
+
 
 - [Repository with Frontend](https://github.com/melondina/bookswap_frontend)
   This project was bootstrapped with Create React App used JavaScript and TypeScript.
 
-- All bug reports was added in (Jira)[https://drive.google.com/drive/folders/1ofeoaW9_trovnZC_CzGjSVgSkK-87KxD?usp=drive_link]
+
+- All bug reports was added in [Jira](https://drive.google.com/drive/folders/1ofeoaW9_trovnZC_CzGjSVgSkK-87KxD?usp=drive_link)
 
 
-## Test report from Jenkins
-- Smoke test
+- [Test report](Documentation/TestResults.md) from Jenkins
 
-![Quick tests](images/Quick_tests.png)
-
-- Regression tests 
-
-![Regression tests]()
-
-- Rest assured tests
-
-![Rest assured tests](images/Rest_assured_tests.png)
 
 <!--
 //скриншот тестов с тест линка

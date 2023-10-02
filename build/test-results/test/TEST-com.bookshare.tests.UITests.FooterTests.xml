@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.UITests.FooterTests" tests="6" skipped="0" failures="0" errors="0" timestamp="2023-10-02T14:45:27" hostname="LAPTOP-LILIIA" time="0.192">
+  <properties/>
+  <testcase name="contactIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.057"/>
+  <testcase name="facebookIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.023"/>
+  <testcase name="instagramIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.022"/>
+  <testcase name="linkedInIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.019"/>
+  <testcase name="termAndConditionIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.024"/>
+  <testcase name="twitterIsPresentTest" classname="com.bookshare.tests.UITests.FooterTests" time="0.025"/>
+  <system-out><![CDATA[17:45:27.367 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test contactIsPresentTest with data: []
+17:45:27.426 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: contactIsPresentTest
+17:45:27.426 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.427 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:27.429 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test facebookIsPresentTest with data: []
+17:45:27.453 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: facebookIsPresentTest
+17:45:27.453 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.453 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:27.455 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test instagramIsPresentTest with data: []
+17:45:27.478 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: instagramIsPresentTest
+17:45:27.479 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.479 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:27.481 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test linkedInIsPresentTest with data: []
+17:45:27.502 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: linkedInIsPresentTest
+17:45:27.502 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.502 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:27.504 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test termAndConditionIsPresentTest with data: []
+17:45:27.530 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: termAndConditionIsPresentTest
+17:45:27.531 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.531 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:27.534 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test twitterIsPresentTest with data: []
+17:45:27.561 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: twitterIsPresentTest
+17:45:27.561 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:27.561 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

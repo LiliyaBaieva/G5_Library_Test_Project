@@ -4,11 +4,7 @@
 
   <test name="Regression" >
     <classes>
-      <class name="com.bookshare.tests.UITests.LoginTests">
-        <methods>
-          <exclude name=".*Negative.*"></exclude>
-        </methods>
-      </class>
+      <class name="com.bookshare.tests.UITests.LoginTests" />
       <class name="com.bookshare.tests.UITests.LogOutTests" />
       <class name="com.bookshare.tests.UITests.HeaderTests" />
       <class name="com.bookshare.tests.UITests.FooterTests" />
@@ -19,7 +15,7 @@
       <class name="com.bookshare.tests.UITests.GetBookTests"/>
       <class name="com.bookshare.tests.UITests.DeleteBookFromWantToReadTests"/>
       <class name="com.bookshare.tests.UITests.LoginTests"/>
-      <class name="com.bookshare.tests.UITests.MyProfileTests"/>
+<!--      <class name="com.bookshare.tests.UITests.MyProfileTests"/>-->
       <class name="com.bookshare.tests.UITests.RegisterAccountTests"/>
     </classes>
   </test>

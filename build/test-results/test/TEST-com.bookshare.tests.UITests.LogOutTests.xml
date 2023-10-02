@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.UITests.LogOutTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-02T14:45:51" hostname="LAPTOP-LILIIA" time="1.2">
+  <properties/>
+  <testcase name="logOutUser" classname="com.bookshare.tests.UITests.LogOutTests" time="1.2"/>
+  <system-out><![CDATA[17:45:50.272 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test logOutUser with data: []
+17:45:52.503 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: logOutUser
+17:45:52.503 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:52.503 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

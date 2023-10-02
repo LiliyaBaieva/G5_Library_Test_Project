@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.bookshare.tests.UITests.HeaderTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-10-02T14:45:44" hostname="LAPTOP-LILIIA" time="4.496">
+  <properties/>
+  <testcase name="headerLoggedInUser" classname="com.bookshare.tests.UITests.HeaderTests" time="2.227"/>
+  <testcase name="headerNotLoggedInUser" classname="com.bookshare.tests.UITests.HeaderTests" time="2.264"/>
+  <system-out><![CDATA[17:45:44.446 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test headerLoggedInUser with data: []
+17:45:46.676 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: headerLoggedInUser
+17:45:46.677 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:46.677 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+17:45:46.679 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test headerNotLoggedInUser with data: []
+17:45:48.945 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: headerNotLoggedInUser
+17:45:48.945 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+17:45:48.945 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
