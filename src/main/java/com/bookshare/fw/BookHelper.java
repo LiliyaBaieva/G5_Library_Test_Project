@@ -169,7 +169,10 @@ public class BookHelper extends BaseHelper{
   }
 
   public boolean isErrorWindowDisplayed() {
-    return isElementPresent(By.cssSelector("p.error-message"));
+    pause(1000);
+    boolean result = isElementPresent(By.cssSelector("p.error-message"));
+    clickOnCloseErrorWindowButton();
+    return result;
   }
 
 

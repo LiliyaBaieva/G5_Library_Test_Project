@@ -8,7 +8,7 @@ public class LoginTests extends TestBase{
 
   @BeforeMethod
   public void ensurePrecondition(){
-    if(!app.getHeader().isLoginLinkPresent()){
+    if(app.getHeader().isLogOutButtonPresent()){
       app.getUser().logOutUser();
     }
   }
@@ -27,19 +27,22 @@ public class LoginTests extends TestBase{
   @Test
   public void loginNotRegisteredUserNegativeTest(){
     app.getUser().loginUser("boris@mail.com", "$Boris.2023$");
-    Assert.assertTrue(app.getUser().isLoginButtonPresent()); //TODO refactoring assert
+    Assert.assertTrue(app.getBook().isErrorWindowDisplayed());
+    app.getHeader().clickOnLogo();
   }
 
   @Test
   public void loginWithEmptyEmailNegativeTest(){
-    app.getUser().loginUser(null, "$Anna.2023$");
-    Assert.assertTrue(app.getUser().isLoginButtonPresent()); //TODO refactoring assert
+    app.getUser().loginUser("", "$Anna.2023$");
+    Assert.assertTrue(app.getBook().isErrorWindowDisplayed());
+    app.getHeader().clickOnLogo();
   }
 
   @Test
   public void loginWithEmptyPasswordNegativeTest(){
-    app.getUser().loginUser("anna@mail.com", null);
-    Assert.assertTrue(app.getUser().isLoginButtonPresent()); //TODO refactoring assert
+    app.getUser().loginUser("anna@mail.com", "");
+    Assert.assertTrue(app.getBook().isErrorWindowDisplayed());
+    app.getHeader().clickOnLogo();
   }
 
 }

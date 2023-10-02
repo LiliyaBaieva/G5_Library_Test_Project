@@ -30,6 +30,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public boolean isLogOutButtonPresent() {
+    pause(1000);
     return isElementPresent(By.xpath("//a[.='Log out']"));
   }
 
@@ -112,6 +113,7 @@ public class HeaderHelper extends BaseHelper {
   }
 
   public void clickOnLogo() {
+    pause(1000);
     click(By.cssSelector("[alt='logo']"));
   }
 }

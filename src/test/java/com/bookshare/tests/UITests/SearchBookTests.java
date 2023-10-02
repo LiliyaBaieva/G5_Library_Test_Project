@@ -1,9 +1,15 @@
 package com.bookshare.tests.UITests;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class SearchBookTests extends TestBase{
+
+  @BeforeMethod
+  public void precondition(){
+    app.getHeader().clickOnLogo();
+  }
 
   @Test
   public void searchBookByTitleTest(){
@@ -28,6 +34,7 @@ public class SearchBookTests extends TestBase{
   public void searchBookByLanguageTest(){
     app.getBook().searchBookByLanguage("English");
     String result = app.getBook().getLanguageOfFirstBook(1);
+    app.getBook().pause(1000);
     Assert.assertEquals(result, "English");
   }
 
@@ -35,7 +42,7 @@ public class SearchBookTests extends TestBase{
   public void searchBookByLocationTest(){
     app.getBook().searchBookByLocation("Berlin");
     String result = app.getBook().getCityOfBook(1);
-    System.out.println("******************" + result);
+    app.getBook().pause(1000);
     Assert.assertTrue(result.contains("Berlin"));
   }
 

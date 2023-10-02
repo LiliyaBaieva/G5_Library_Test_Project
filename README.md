@@ -38,6 +38,19 @@ Developers use Java, Spring Boot,Lombok and database PostgresSQL.
 - All bug reports was added in (Jira)[https://drive.google.com/drive/folders/1ofeoaW9_trovnZC_CzGjSVgSkK-87KxD?usp=drive_link]
 
 
+## Test report from Jenkins
+- Smoke test
+
+![Quick tests](images/Quick_tests.png)
+
+- Regression tests 
+
+![Regression tests]()
+
+- Rest assured tests
+
+![Rest assured tests](images/Rest_assured_tests.png)
+
 <!--
 //скриншот тестов с тест линка
 //скриншот тестов с дженкинса рест апи, смоки и регрессионого.

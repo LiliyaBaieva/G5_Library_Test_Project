@@ -49,9 +49,6 @@ public class UserHelper extends BaseHelper {
   }
 
   public void loginUser(String email, String password) {
-//    if(header.isLogOutButtonPresent()){
-//      logOutUser();
-//    }
     header.clickOnLoginLink();
     fillInLoginForm(email, password);
     clickOnLogInButton();
@@ -115,6 +112,7 @@ public class UserHelper extends BaseHelper {
   }
 
   public void logOutUser() {
+    pause(1000);
     header.clickOnLogOutButton();
     clickOnYesButtonToConfirmLogOut();
   }

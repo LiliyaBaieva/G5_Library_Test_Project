@@ -26,14 +26,18 @@ public class GetBookTests extends TestBase{
   @Test
   public void alreadyHaveThisBookNegativeTest(){
     app.getUser().loginUser("anna@mail.com", "$Anna.2023$");
-    app.getHeader().clickOnMyLibraryLink();
-    app.getBook().clickOnWantToReadButton();
-    String titleOfBook = app.getBook().getTitleOfBook(1);
+    String titleOfBook = app.getBook().getTitleOfBook(8);
+    app.getBook().clickOnGetBookButton();
+
     app.getHeader().clickOnLogo();
     app.getBook().clickMoreInfoOfBookLinkByTitle(titleOfBook);
     app.getBook().clickOnGetBookButton();
+
     Assert.assertTrue(app.getBook().isErrorWindowDisplayed());
-    app.getBook().clickOnCloseErrorWindowButton();
+
+    app.getHeader().clickOnMyLibraryLink();
+    app.getBook().deleteBookFromWantToRead(titleOfBook);
+
   }
 
   @Test
