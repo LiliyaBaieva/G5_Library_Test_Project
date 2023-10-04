@@ -1,69 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.bookshare.tests.UITests.SearchBookTests" tests="5" skipped="4" failures="1" errors="0" timestamp="2023-10-02T14:46:59" hostname="LAPTOP-LILIIA" time="2.113">
+<testsuite name="com.bookshare.tests.UITests.SearchBookTests" tests="4" skipped="0" failures="1" errors="0" timestamp="2023-10-04T16:40:15" hostname="LAPTOP-LILIIA" time="22.872">
   <properties/>
-  <testcase name="precondition" classname="com.bookshare.tests.UITests.SearchBookTests" time="2.106">
-    <failure message="org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;img width=&quot;100%&quot; src=&quot;data:image/png;base64,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&quot; alt=&quot;logo&quot;&gt; is not clickable at point (182, 17). Other element would receive the click: &lt;iframe id=&quot;webpack-dev-server-client-overlay&quot; src=&quot;about:blank&quot; style=&quot;position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;&quot;&gt;&lt;/iframe&gt;&#10;  (Session info: chrome=117.0.5938.132)&#10;Build info: version: '4.9.1', revision: 'eb2032df7f'&#10;System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [3a49c724d5f5f48b1ffdd32b66168bdb, clickElement {id=BCED42861F0555134F6E37E1EBDCC06E_element_2}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\Lilu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60824/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}&#10;Element: [[ChromeDriver: chrome on windows (3a49c724d5f5f48b1ffdd32b66168bdb)] -&gt; css selector: [alt='logo']]&#10;Session ID: 3a49c724d5f5f48b1ffdd32b66168bdb" type="org.openqa.selenium.ElementClickInterceptedException">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;img width=&quot;100%&quot; src=&quot;data:image/png;base64,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&quot; alt=&quot;logo&quot;&gt; is not clickable at point (182, 17). Other element would receive the click: &lt;iframe id=&quot;webpack-dev-server-client-overlay&quot; src=&quot;about:blank&quot; style=&quot;position: fixed; inset: 0px; width: 100vw; height: 100vh; border: none; z-index: 2147483647;&quot;&gt;&lt;/iframe&gt;
-  (Session info: chrome=117.0.5938.132)
-Build info: version: '4.9.1', revision: 'eb2032df7f'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3a49c724d5f5f48b1ffdd32b66168bdb, clickElement {id=BCED42861F0555134F6E37E1EBDCC06E_element_2}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 117.0.5938.132, chrome: {chromedriverVersion: 116.0.5845.96 (1a3918166880..., userDataDir: C:\Users\Lilu\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60824}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60824/devtoo..., se:cdpVersion: 117.0.5938.132, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (3a49c724d5f5f48b1ffdd32b66168bdb)] -&gt; css selector: [alt='logo']]
-Session ID: 3a49c724d5f5f48b1ffdd32b66168bdb
-	at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base@17.0.7/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base@17.0.7/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-	at app//org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-	at app//org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:193)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:183)
-	at app//org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:158)
-	at app//org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at app//org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:257)
-	at app//org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:78)
-	at app//com.bookshare.fw.BaseHelper.click(BaseHelper.java:41)
-	at app//com.bookshare.fw.HeaderHelper.clickOnLogo(HeaderHelper.java:117)
-	at app//com.bookshare.tests.UITests.SearchBookTests.precondition(SearchBookTests.java:11)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-	at app//org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
-	at app//org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
-	at app//org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:810)
-	at app//org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:577)
-	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-	at app//org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-	at app//org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-	at app//org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-	at app//org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-	at app//org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base@17.0.7/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at app//org.testng.TestRunner.privateRun(TestRunner.java:848)
-	at app//org.testng.TestRunner.run(TestRunner.java:621)
-	at app//org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-	at app//org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-	at app//org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-	at app//org.testng.SuiteRunner.run(SuiteRunner.java:336)
-	at app//org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at app//org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at app//org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-	at app//org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-	at app//org.testng.TestNG.runSuites(TestNG.java:1114)
-	at app//org.testng.TestNG.run(TestNG.java:1082)
+  <testcase name="searchBookByAuthorTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="5.86"/>
+  <testcase name="searchBookByLanguageTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="3.735"/>
+  <testcase name="searchBookByLocationTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="3.803">
+    <failure message="java.lang.AssertionError: expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.testng.Assert.failNotEquals(Assert.java:1578)
+	at org.testng.Assert.assertTrue(Assert.java:57)
+	at org.testng.Assert.assertTrue(Assert.java:67)
+	at com.bookshare.tests.UITests.SearchBookTests.searchBookByLocationTest(SearchBookTests.java:46)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
 	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.runTests(TestNGTestClassProcessor.java:146)
 	at org.gradle.api.internal.tasks.testing.testng.TestNGTestClassProcessor.stop(TestNGTestClassProcessor.java:91)
 	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base@17.0.7/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base@17.0.7/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base@17.0.7/java.lang.reflect.Method.invoke(Method.java:568)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
 	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
 	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
@@ -76,23 +54,28 @@ Session ID: 3a49c724d5f5f48b1ffdd32b66168bdb
 	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56)
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:133)
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:71)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
-	at app//worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69)
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74)
 </failure>
   </testcase>
-  <testcase name="searchBookByAuthorTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="0.001">
-    <skipped/>
-  </testcase>
-  <testcase name="searchBookByLanguageTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="searchBookByLocationTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <testcase name="searchBookByTitleTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="0.0">
-    <skipped/>
-  </testcase>
-  <system-out><![CDATA[17:46:59.031 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test searchBookByAuthorTest with data: []
+  <testcase name="searchBookByTitleTest" classname="com.bookshare.tests.UITests.SearchBookTests" time="5.77"/>
+  <system-out><![CDATA[19:40:14.201 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test searchBookByAuthorTest with data: []
+Dan Brown
+19:40:21.204 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: searchBookByAuthorTest
+19:40:21.204 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+19:40:21.205 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+19:40:21.212 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test searchBookByLanguageTest with data: []
+19:40:26.050 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: searchBookByLanguageTest
+19:40:26.055 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+19:40:26.056 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+19:40:26.064 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test searchBookByLocationTest with data: []
+19:40:31.351 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- FAILED: searchBookByLocationTest Screenshot: D:\DOCUMENTS\AIT_TR\FINAL_Project\G5_Library_Test_Project\src\screenshots\screen1696437631340.png
+19:40:31.352 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+19:40:31.352 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
+19:40:31.354 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Start test searchBookByTitleTest with data: []
+19:40:38.213 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- PASSED: searchBookByTitleTest
+19:40:38.213 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- Stop test
+19:40:38.213 [Test worker] INFO  c.bookshare.tests.UITests.TestBase -- ===============================
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

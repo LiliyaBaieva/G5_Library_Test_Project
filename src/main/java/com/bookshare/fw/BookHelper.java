@@ -168,12 +168,7 @@ public class BookHelper extends BaseHelper{
     click(By.xpath("//button[.='Delete']"));
   }
 
-  public boolean isErrorWindowDisplayed() {
-    pause(1000);
-    boolean result = isElementPresent(By.cssSelector("p.error-message"));
-    clickOnCloseErrorWindowButton();
-    return result;
-  }
+
 
 
 }

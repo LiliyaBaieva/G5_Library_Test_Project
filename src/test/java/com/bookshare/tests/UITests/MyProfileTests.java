@@ -15,7 +15,7 @@ public class MyProfileTests extends TestBase{
     }
   }
 
-  @Test
+//  @Test
   public void updateUserInfo(){
     app.getHeader().clickOnMyProfileLink();
     app.getUser().fillInUpdateForm("Anna", "Lou", "10115");

@@ -14,7 +14,7 @@ Edge Browser
 - ### Regression tests
 
 Chrome browser
-  ![Regression tests](../)
+  ![Regression tests](../images/regression_tests.png)
 
 Firefox browser
   ![Regression tests](../)

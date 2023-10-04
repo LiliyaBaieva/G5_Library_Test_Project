@@ -160,6 +160,13 @@ public class BaseHelper {
   public boolean isErrorWindowPresent() {
     return isElementPresent(By.cssSelector(".error-message"));
   }
+
+  public boolean isErrorWindowDisplayed() {
+    pause(1000);
+    boolean result = isElementPresent(By.cssSelector("p.error-message"));
+    clickOnCloseErrorWindowButton();
+    return result;
+  }
 }
 
 

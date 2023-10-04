@@ -79,7 +79,7 @@ public class RegisterAccountTests extends TestBase {
 
   @Test
   public void registrationUserWithWrongEmailNegative2(){
-    app.getUser().fillInRegistrationForm("testm@mailcom", "Qwerty$123", "Qwerty$123");
+    app.getUser().fillInRegistrationForm("testt@mailcom", "Qwerty$123", "Qwerty$123");
     app.getUser().clickOnSignUpButton();
 //    Assert.assertTrue(validationMessageElement.isDisplayed());
 //    Assert.assertTrue(app.getUser().isPopUpWinIsPresent());
@@ -91,7 +91,7 @@ public class RegisterAccountTests extends TestBase {
     app.getUser().fillInRegistrationForm("anna@mail.com", "$Anna.2023$", "$Anna.2023$");
     app.getUser().clickOnSignUpButton();
     Assert.assertTrue(app.getUser().isErrorWindowPresent());
-    app.getUser().clickOnCloseErrorWindowButton();
+    app.getUser().clickOnCloseErrorWindowButton(); //Todo
   }
 
   @Test
